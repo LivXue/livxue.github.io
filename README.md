@@ -13,9 +13,8 @@
 ## 🧠 Research Interests
 
 - Multimodal Reasoning & Explainable AI  
-- Visual Question Answering (VQA)  
-- Neural-Symbolic & Causal Inference Methods  
-- Cross-modal Retrieval & Multimodal LLMs
+- Multimodal LLMs
+- LLM Agents
 
 ---
 
@@ -93,7 +92,8 @@
 
 ## 🔎 Selected Honors
 
-✨ *Best Paper Nomination* — LDRE @ SIGIR 2024 :contentReference[oaicite:12]{index=12}
+✨ *Best Paper Honorable Mentionn* — Zhenyu Yang, **Dizhan Xue**, Shengsheng Qian, Weiming Dong, and Changsheng Xu. **LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval.**
+   *ACM SIGIR 2024*.
 
 ---
 
