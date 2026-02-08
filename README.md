@@ -482,7 +482,7 @@ I'm passionate about building AI systems that can explain their reasoning proces
     </p>
 
     <div style="margin-top: 12px;">
-      <span style="padding: 6px 14px; background: rgba(251, 191, 36, 0.25); color: #ffffff; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid #78350f;">ACM SIGIR 2024</span>
+      <span style="padding: 6px 14px; background: rgba(251, 191, 36, 0.25); color: #78350f; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.4);">ACM SIGIR 2024</span>
     </div>
   </div>
 </div>
@@ -503,7 +503,7 @@ I'm passionate about building AI systems that can explain their reasoning proces
     </p>
 
     <div style="margin-top: 12px;">
-      <span style="padding: 6px 14px; background: rgba(6, 182, 212, 0.25); color: #ffffff; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid #0c4a6e;">2018</span>
+      <span style="padding: 6px 14px; background: rgba(6, 182, 212, 0.25); color: #0c4a6e; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid rgba(6, 182, 212, 0.4);">2018</span>
     </div>
   </div>
 </div>
