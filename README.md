@@ -495,7 +495,7 @@ I'm passionate about building AI systems that can explain their reasoning proces
   <div style="position: relative; z-index: 1;">
     <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); border-radius: 20px; margin-bottom: 16px;">
       <span style="font-size: 18px;">🎖️</span>
-      <span style="color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px;">Academic Scholarship</span>
+      <span style="color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px;">First-Class Academic Scholarship</span>
     </div>
 
     <p style="margin: 0; color: #0c4a6e; font-size: 15px; line-height: 1.7; font-weight: 500;">
@@ -550,7 +550,7 @@ I'm passionate about building AI systems that can explain their reasoning proces
 
 <div align="center">
 
-## 📫 Contact
+### 📫 Contact
 
 <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
 
