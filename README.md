@@ -99,7 +99,7 @@
     </h1>
 
     <p class="hero-subtitle">
-      PhD Student @ <span style="color: #22d3ee; font-weight: 500;">Institute of Automation, CAS</span>
+      PhD Student @ <span style="color: #22d3ee; font-weight: 500;">State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences</span>
     </p>
 
     <!-- Social Links -->
@@ -163,10 +163,10 @@ I'm passionate about building AI systems that can explain their reasoning proces
   </div>
 
   <div style="margin: 15px 0; padding: 12px 16px; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
-    <p style="margin: 0; color: #64748b; font-size: 13px;">
+    <p style="margin: 0; color: #94a3b8; font-size: 13px;">
       <span style="color: #06b6d4; font-weight: 600;">📅 Sep 2021 - Jun 2026</span><br>
-      <span style="color: #94a3b8;">👨‍🏫 Supervisor:</span> Prof. Changsheng Xu<br>
-      <span style="color: #94a3b8;">📝 Thesis:</span> Multimodal Reasoning in Complicated Scenarios
+      <span style="color: #e2e8f0; font-weight: 500;">👨‍🏫 Supervisor:</span> <span style="color: #cbd5e1;">Prof. Changsheng Xu</span><br>
+      <span style="color: #e2e8f0; font-weight: 500;">📝 Thesis:</span> <span style="color: #cbd5e1;">Multimodal Reasoning in Complicated Scenarios</span>
     </p>
   </div>
 </div>
@@ -182,10 +182,10 @@ I'm passionate about building AI systems that can explain their reasoning proces
   </div>
 
   <div style="margin: 15px 0; padding: 12px 16px; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
-    <p style="margin: 0; color: #64748b; font-size: 13px;">
+    <p style="margin: 0; color: #94a3b8; font-size: 13px;">
       <span style="color: #10b981; font-weight: 600;">📅 Sep 2017 - Jun 2021</span><br>
-      <span style="color: #94a3b8;">👨‍🏫 Supervisor:</span> Prof. Changsheng Xu<br>
-      <span style="color: #94a3b8;">📝 Thesis:</span> Debiased Short Video Recommendation Based on Counterfactual Reasoning
+      <span style="color: #e2e8f0; font-weight: 500;">👨‍🏫 Supervisor:</span> <span style="color: #cbd5e1;">Prof. Changsheng Xu</span><br>
+      <span style="color: #e2e8f0; font-weight: 500;">📝 Thesis:</span> <span style="color: #cbd5e1;">Debiased Short Video Recommendation Based on Counterfactual Reasoning</span>
     </p>
   </div>
 </div>
@@ -443,22 +443,22 @@ I'm passionate about building AI systems that can explain their reasoning proces
 <div style="padding: 20px; background: rgba(30, 41, 59, 0.3); border: 1px dashed rgba(100, 116, 139, 0.4); border-radius: 12px;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 250px;">
-      <p style="margin: 0; color: #cbd5e1; font-size: 14px; line-height: 1.6;">
+      <p style="margin: 0; color: #f1f5f9; font-size: 14px; line-height: 1.6;">
         <em>A Survey on Interpretable Cross-modal Reasoning.</em> CoRR abs/2309.01955 (2023).
       </p>
     </div>
-    <span style="padding: 5px 12px; background: rgba(100, 116, 139, 0.2); color: #cbd5e1; font-size: 10px; font-weight: 600; border-radius: 15px; white-space: nowrap; border: 1px dashed rgba(100, 116, 139, 0.4);">arXiv 2023</span>
+    <span style="padding: 5px 12px; background: rgba(6, 182, 212, 0.2); color: #22d3ee; font-size: 10px; font-weight: 600; border-radius: 15px; white-space: nowrap; border: 1px dashed rgba(6, 182, 212, 0.4);">arXiv 2023</span>
   </div>
 </div>
 
 <div style="padding: 20px; background: rgba(30, 41, 59, 0.3); border: 1px dashed rgba(100, 116, 139, 0.4); border-radius: 12px;">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 250px;">
-      <p style="margin: 0; color: #cbd5e1; font-size: 14px; line-height: 1.6;">
+      <p style="margin: 0; color: #f1f5f9; font-size: 14px; line-height: 1.6;">
         <em>Short-Video Propagation Influence Rating: A New Real-world Dataset and A New Large Graph Model.</em> CoRR abs/2503.23746 (2025).
       </p>
     </div>
-    <span style="padding: 5px 12px; background: rgba(100, 116, 139, 0.2); color: #cbd5e1; font-size: 10px; font-weight: 600; border-radius: 15px; white-space: nowrap; border: 1px dashed rgba(100, 116, 139, 0.4);">arXiv 2025</span>
+    <span style="padding: 5px 12px; background: rgba(6, 182, 212, 0.2); color: #22d3ee; font-size: 10px; font-weight: 600; border-radius: 15px; white-space: nowrap; border: 1px dashed rgba(6, 182, 212, 0.4);">arXiv 2025</span>
   </div>
 </div>
 
@@ -479,12 +479,12 @@ I'm passionate about building AI systems that can explain their reasoning proces
       <span style="color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px;">Best Paper Honorable Mention</span>
     </div>
 
-    <p style="margin: 0; color: #fef3c7; font-size: 15px; line-height: 1.7;">
-      Zhenyu Yang, <strong>Dizhan Xue</strong>, Shengsheng Qian, Weiming Dong, Changsheng Xu. <em>LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval.</em>
+    <p style="margin: 0; color: #ffffff; font-size: 15px; line-height: 1.7;">
+      Zhenyu Yang, <strong style="color: #fef3c7;">Dizhan Xue</strong>, Shengsheng Qian, Weiming Dong, Changsheng Xu. <em>LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval.</em>
     </p>
 
     <div style="margin-top: 12px;">
-      <span style="padding: 6px 14px; background: rgba(251, 191, 36, 0.2); color: #fcd34d; font-size: 11px; font-weight: 600; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.3);">ACM SIGIR 2024</span>
+      <span style="padding: 6px 14px; background: rgba(251, 191, 36, 0.25); color: #ffffff; font-size: 11px; font-weight: 600; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.4);">ACM SIGIR 2024</span>
     </div>
   </div>
 </div>
