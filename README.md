@@ -477,8 +477,8 @@ I'm passionate about building AI systems that can explain their reasoning proces
       <span style="color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px;">Best Paper Honorable Mention</span>
     </div>
 
-    <p style="margin: 0; color: #fef3c7; font-size: 15px; line-height: 1.7; font-weight: 500;">
-      Zhenyu Yang, <strong style="color: #ffffff;">Dizhan Xue</strong>, Shengsheng Qian, Weiming Dong, Changsheng Xu. <em>LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval.</em>
+    <p style="margin: 0; color: #78350f; font-size: 15px; line-height: 1.7; font-weight: 500;">
+      Zhenyu Yang, <strong style="color: #92400e; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Weiming Dong, Changsheng Xu. <em>LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval.</em>
     </p>
 
     <div style="margin-top: 12px;">
@@ -498,8 +498,8 @@ I'm passionate about building AI systems that can explain their reasoning proces
       <span style="color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px;">Academic Scholarship</span>
     </div>
 
-    <p style="margin: 0; color: #e0f2fe; font-size: 15px; line-height: 1.7; font-weight: 500;">
-      <strong style="color: #ffffff;">First-Class Academic Scholarship</strong> of University of Chinese Academy of Sciences (UCAS), awarded to top students for outstanding academic performance.
+    <p style="margin: 0; color: #0c4a6e; font-size: 15px; line-height: 1.7; font-weight: 500;">
+      <strong style="color: #0e7490; font-weight: 700;">First-Class Academic Scholarship</strong> of University of Chinese Academy of Sciences (UCAS), awarded to top students for outstanding academic performance.
     </p>
 
     <div style="margin-top: 12px;">
