@@ -126,8 +126,6 @@
 
 ## 🎯 About Me
 
-<div style="padding: 30px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%); border-left: 4px solid #06b6d4; border-radius: 0 12px 12px 0; margin: 20px 0;">
-
 I'm a PhD candidate at the **State Key Laboratory of Multimodal Artificial Intelligence Systems**, Institute of Automation, Chinese Academy of Sciences (CASIA), advised by Prof. Changsheng Xu.
 
 **My Research Vision**
@@ -139,8 +137,6 @@ My core research focuses on enabling AI to better understand and reason about co
 > *"True intelligence lies not just in perception, but in reasoning across modalities to construct meaningful understanding."*
 
 I'm passionate about building AI systems that can explain their reasoning process—because I believe interpretability is crucial for trustworthy AI.
-
-</div>
 
 ---
 
@@ -468,7 +464,9 @@ I'm passionate about building AI systems that can explain their reasoning proces
 
 ## 🏆 Selected Honors
 
-<div style="padding: 25px; background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%); border: 2px solid rgba(251, 191, 36, 0.3); border-radius: 16px; margin: 30px 0; position: relative; overflow: hidden;">
+<div style="display: grid; gap: 20px; margin: 30px 0;">
+
+<div style="padding: 25px; background: linear-gradient(135deg, rgba(251, 191, 36, 0.12) 0%, rgba(245, 158, 11, 0.06) 100%); border: 2px solid rgba(251, 191, 36, 0.35); border-radius: 16px; position: relative; overflow: hidden;">
 
   <!-- Decorative elements -->
   <div style="position: absolute; top: -20px; right: -20px; font-size: 120px; opacity: 0.05; transform: rotate(15deg);">🏆</div>
@@ -479,14 +477,37 @@ I'm passionate about building AI systems that can explain their reasoning proces
       <span style="color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px;">Best Paper Honorable Mention</span>
     </div>
 
-    <p style="margin: 0; color: #ffffff; font-size: 15px; line-height: 1.7;">
-      Zhenyu Yang, <strong style="color: #fef3c7;">Dizhan Xue</strong>, Shengsheng Qian, Weiming Dong, Changsheng Xu. <em>LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval.</em>
+    <p style="margin: 0; color: #fef3c7; font-size: 15px; line-height: 1.7; font-weight: 500;">
+      Zhenyu Yang, <strong style="color: #ffffff;">Dizhan Xue</strong>, Shengsheng Qian, Weiming Dong, Changsheng Xu. <em>LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval.</em>
     </p>
 
     <div style="margin-top: 12px;">
-      <span style="padding: 6px 14px; background: rgba(251, 191, 36, 0.25); color: #ffffff; font-size: 11px; font-weight: 600; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.4);">ACM SIGIR 2024</span>
+      <span style="padding: 6px 14px; background: rgba(251, 191, 36, 0.25); color: #ffffff; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.4);">ACM SIGIR 2024</span>
     </div>
   </div>
+</div>
+
+<div style="padding: 25px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(14, 165, 233, 0.06) 100%); border: 2px solid rgba(6, 182, 212, 0.35); border-radius: 16px; position: relative; overflow: hidden;">
+
+  <!-- Decorative elements -->
+  <div style="position: absolute; top: -20px; right: -20px; font-size: 120px; opacity: 0.05; transform: rotate(15deg);">🎓</div>
+
+  <div style="position: relative; z-index: 1;">
+    <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); border-radius: 20px; margin-bottom: 16px;">
+      <span style="font-size: 18px;">🎖️</span>
+      <span style="color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px;">Academic Scholarship</span>
+    </div>
+
+    <p style="margin: 0; color: #e0f2fe; font-size: 15px; line-height: 1.7; font-weight: 500;">
+      <strong style="color: #ffffff;">First-Class Academic Scholarship</strong> of University of Chinese Academy of Sciences (UCAS), awarded to top students for outstanding academic performance.
+    </p>
+
+    <div style="margin-top: 12px;">
+      <span style="padding: 6px 14px; background: rgba(6, 182, 212, 0.25); color: #ffffff; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid rgba(6, 182, 212, 0.4);">2018</span>
+    </div>
+  </div>
+</div>
+
 </div>
 
 ---
