@@ -767,7 +767,7 @@
       <p style="margin: 4px 0 0; color: #cbd5e1; font-size: 13px; font-weight: 500;">Cross-modal Retrieval</p>
     </div>
   </div>
-  <p style="position: relative; z-index: 1; margin: 0 0 16px; color: #cbd5e1; font-size: 15px; line-height: 1.6;">Graph Neural Network for Cross-modal Retrieval tasks.</p>
+  <p style="position: relative; z-index: 1; margin: 0 0 16px; color: #cbd5e1; font-size: 15px; line-height: 1.6;">Graph Neural Network and Toolkits for Cross-modal Retrieval tasks.</p>
   <a href="https://github.com/LivXue/GNN4CMR" style="position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: linear-gradient(135deg, #10b981, #14b8a6); color: white; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 12px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
     ⚡ View Project
   </a>
