@@ -349,7 +349,7 @@
 
 <div style="text-align: center; margin: 80px 0 60px;">
   <div style="display: inline-flex; align-items: center; gap: 16px; padding: 12px 32px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%); border: 2px solid rgba(6, 182, 212, 0.2); border-radius: 50px; backdrop-filter: blur(10px);">
-    <span style="font-size: 32px; filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));">🧠</span>
+    <span style="font-size: 32px; filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));">🧑‍🔬</span>
     <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px; text-decoration: none !important; border: none !important; border-bottom: none !important; box-shadow: none !important; outline: none !important;">Research Interests</h2>
   </div>
 </div>
@@ -749,7 +749,7 @@
 <div style="padding: 25px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(14, 165, 233, 0.06) 100%); border: 2px solid rgba(6, 182, 212, 0.35); border-radius: 16px; position: relative; overflow: hidden;">
 
   <!-- Decorative elements -->
-  <div style="position: absolute; top: -20px; right: -20px; font-size: 120px; opacity: 0.05; transform: rotate(15deg);">🎓</div>
+  <div style="position: absolute; top: -20px; right: -20px; font-size: 120px; opacity: 0.05; transform: rotate(15deg);">🌟</div>
 
   <div style="position: relative; z-index: 1;">
     <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); border-radius: 20px; margin-bottom: 16px;">
