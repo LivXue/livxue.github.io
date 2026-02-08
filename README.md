@@ -249,7 +249,7 @@
 
 <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
   <p style="font-size: 17px; line-height: 1.8; color: #cbd5e1; margin-bottom: 24px;">
-    I'm a PhD candidate at the <strong style="color: #22d3ee; font-weight: 600;">State Key Laboratory of Multimodal Artificial Intelligence Systems</strong>, Institute of Automation, Chinese Academy of Sciences (CASIA), advised by Prof. Changsheng Xu.
+    I'm a PhD candidate at the <strong style="color: #22d3ee; font-weight: 600;">State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences (CASIA)</strong>, advised by Prof. Changsheng Xu.
   </p>
 
   <div style="padding: 28px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(14, 165, 233, 0.04) 100%); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 20px; margin-bottom: 24px;">
@@ -271,7 +271,7 @@
   </div>
 
   <p style="font-size: 16px; line-height: 1.8; color: #cbd5e1; margin: 0;">
-    I'm passionate about building AI systems that can explain their reasoning process—because I believe <strong style="color: #22d3ee; font-weight: 600;">interpretability is crucial for trustworthy AI</strong>.
+    I'm passionate about building AI systems that can explain their reasoning process because I believe <strong style="color: #22d3ee; font-weight: 600;">interpretability is crucial for trustworthy AI</strong>.
   </p>
 </div>
 
@@ -358,7 +358,7 @@
 
 <div style="position: relative; padding: 32px 28px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(6, 182, 212, 0.05) 100%); border: 2px solid rgba(6, 182, 212, 0.25); border-radius: 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; cursor: pointer;">
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%); filter: blur(30px); opacity: 0; transition: opacity 0.4s ease;"></div>
-  <div style="font-size: 48px; margin-bottom: 16px; filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.3)); transition: transform 0.4s ease;">🔗</div>
+  <div style="font-size: 48px; margin-bottom: 16px; filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.3)); transition: transform 0.4s ease;">🧩</div>
   <h4 style="margin: 0 0 10px; color: #22d3ee; font-size: 18px; font-weight: 700;">Multimodal Reasoning</h4>
   <p style="margin: 0; color: #cbd5e1; font-size: 14px; font-weight: 500;">& Explainable AI</p>
   <style>
@@ -378,14 +378,14 @@
 
 <div style="position: relative; padding: 32px 28px; background: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0.05) 100%); border: 2px solid rgba(14, 165, 233, 0.25); border-radius: 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; cursor: pointer;">
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%); filter: blur(30px); opacity: 0; transition: opacity 0.4s ease;"></div>
-  <div style="font-size: 48px; margin-bottom: 16px; filter: drop-shadow(0 4px 8px rgba(14, 165, 233, 0.3)); transition: transform 0.4s ease;">🤖</div>
+  <div style="font-size: 48px; margin-bottom: 16px; filter: drop-shadow(0 4px 8px rgba(14, 165, 233, 0.3)); transition: transform 0.4s ease;">🌐</div>
   <h4 style="margin: 0 0 10px; color: #38bdf8; font-size: 18px; font-weight: 700;">Multimodal LLMs</h4>
   <p style="margin: 0; color: #cbd5e1; font-size: 14px; font-weight: 500;">Vision-Language Models</p>
 </div>
 
 <div style="position: relative; padding: 32px 28px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(16, 185, 129, 0.05) 100%); border: 2px solid rgba(16, 185, 129, 0.25); border-radius: 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; cursor: pointer;">
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%); filter: blur(30px); opacity: 0; transition: opacity 0.4s ease;"></div>
-  <div style="font-size: 48px; margin-bottom: 16px; filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.3)); transition: transform 0.4s ease;">🎯</div>
+  <div style="font-size: 48px; margin-bottom: 16px; filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.3)); transition: transform 0.4s ease;">🔄</div>
   <h4 style="margin: 0 0 10px; color: #34d399; font-size: 18px; font-weight: 700;">LLM Agents</h4>
   <p style="margin: 0; color: #cbd5e1; font-size: 14px; font-weight: 500;">& Autonomous Systems</p>
 </div>
@@ -716,7 +716,7 @@
     </div>
 
     <p style="margin: 0; color: #198fd3ff; font-size: 15px; line-height: 1.7; font-weight: 500;">
-      <strong style="color: #1cc8f8ff; font-weight: 700;">First-Class Academic Scholarship</strong> of University of Chinese Academy of Sciences (UCAS), awarded to top students for outstanding academic performance.
+      <strong style="color: #1cc8f8ff; font-weight: 700;">First-Class Academic Scholarship</strong> of University of Chinese Academy of Sciences (UCAS), awarded to top 5% students for outstanding academic performance.
     </p>
 
     <div style="margin-top: 12px;">
