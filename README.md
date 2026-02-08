@@ -162,7 +162,7 @@ I'm passionate about building AI systems that can explain their reasoning proces
     <p style="margin: 0; color: #94a3b8; font-size: 13px;">
       <span style="color: #06b6d4; font-weight: 600;">📅 Sep 2021 - Jun 2026</span><br>
       <span style="color: #e2e8f0; font-weight: 500;">👨‍🏫 Supervisor:</span> <span style="color: #cbd5e1;">Prof. Changsheng Xu</span><br>
-      <span style="color: #e2e8f0; font-weight: 500;">📝 Thesis:</span> <span style="color: #cbd5e1;">Multimodal Reasoning in Complicated Scenarios</span>
+      <span style="color: #e2e8f0; font-weight: 500;">📝 Thesis:</span> <span style="color: #cbd5e1;">Reliable Multimodal Reasoning in Complicated Scenarios</span>
     </p>
   </div>
 </div>
@@ -570,8 +570,6 @@ I'm passionate about building AI systems that can explain their reasoning proces
 </div>
 
 </div>
-
----
 
 <div style="margin-top: 60px; padding: 30px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%); border-radius: 16px;">
 
