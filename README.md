@@ -422,6 +422,12 @@
       <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #0891b2; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Changsheng Xu. <em style="color: #0891b2 !important;">Integrating Neural-Symbolic Reasoning With Variational Causal Inference Network for Explanatory Visual Question Answering.</em>
       </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span style="padding: 4px 12px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.25);">VQA</span>
+        <span style="padding: 4px 12px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.25);">Causal Inference</span>
+        <span style="padding: 4px 12px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.25);">Explainable AI</span>
+        <span style="padding: 4px 12px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.25);">Neural-Symbolic</span>
+      </div>
     </div>
     <span style="padding: 8px 18px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);">IEEE TPAMI 2024</span>
   </div>
@@ -434,6 +440,11 @@
       <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #0284c7; font-weight: 700;">Dizhan Xue</strong>, Jing Cui, Shengsheng Qian, Chuanrui Hu, Changsheng Xu. <em style="color: #0284c7 !important;">SoMe: A Realistic Benchmark for LLM-based Social Media Agents.</em>
       </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">LLM Agents</span>
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">Social Media</span>
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">Benchmark</span>
+      </div>
     </div>
     <span style="padding: 8px 18px; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);">AAAI 2026</span>
   </div>
@@ -446,6 +457,11 @@
       <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #059669; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Changsheng Xu. <em style="color: #059669 !important;">Variational Causal Inference Network for Explanatory Visual Question Answering.</em>
       </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span style="padding: 4px 12px; background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.25);">VQA</span>
+        <span style="padding: 4px 12px; background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.25);">Causal Inference</span>
+        <span style="padding: 4px 12px; background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.25);">Explainable AI</span>
+      </div>
     </div>
     <span style="padding: 8px 18px; background: linear-gradient(135deg, #10b981, #14b8a6); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">ICCV 2023</span>
   </div>
@@ -458,6 +474,12 @@
       <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #d97706; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Changsheng Xu. <em style="color: #d97706 !important;">Few-Shot Multimodal Explanation for Visual Question Answering.</em>
       </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span style="padding: 4px 12px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.25);">VQA</span>
+        <span style="padding: 4px 12px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.25);">Few-Shot</span>
+        <span style="padding: 4px 12px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.25);">Explainable AI</span>
+        <span style="padding: 4px 12px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.25);">LLM Agents</span>
+      </div>
     </div>
     <span style="padding: 8px 18px; background: linear-gradient(135deg, #f59e0b, #f97316); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">ACM MM 2024</span>
   </div>
@@ -470,6 +492,11 @@
       <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #0891b2; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Quan Fang, Changsheng Xu. <em style="color: #0891b2 !important;">MMT: Image-guided Story Ending Generation with Multimodal Memory Transformer.</em>
       </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span style="padding: 4px 12px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.25);">Cross-Modal Generation</span>
+        <span style="padding: 4px 12px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.25);">Vision-Language</span>
+        <span style="padding: 4px 12px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.25);">Memory</span>
+      </div>
     </div>
     <span style="padding: 8px 18px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);">ACM MM 2022</span>
   </div>
@@ -482,6 +509,11 @@
       <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #0284c7; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Xueshan Deng, Changsheng Xu. <em style="color: #0284c7 !important;">A Unified Framework for Backdoor Trigger Segmentation.</em>
       </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">Backdoor Attack</span>
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">Backdoor Defense</span>
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">AI Security</span>
+      </div>
     </div>
     <span style="padding: 8px 18px; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);">IEEE TIP (accepted)</span>
   </div>
@@ -494,6 +526,11 @@
       <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #059669; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Quan Fang, Changsheng Xu. <em style="color: #059669 !important;">LININ: Logic Integrated Neural Inference Network for Explanatory Visual Question Answering.</em>
       </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span style="padding: 4px 12px; background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.25);">VQA</span>
+        <span style="padding: 4px 12px; background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.25);">Neural-Symbolic</span>
+        <span style="padding: 4px 12px; background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.25);">Explainable AI</span>
+      </div>
     </div>
     <span style="padding: 8px 18px; background: linear-gradient(135deg, #10b981, #14b8a6); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">IEEE TMM 2024</span>
   </div>
@@ -506,6 +543,11 @@
       <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #d97706; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Changsheng Xu. <em style="color: #d97706 !important;">Vision-Controllable Language Model for Image-guided Story Ending Generation.</em>
       </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span style="padding: 4px 12px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.25);">Controllable Generation</span>
+        <span style="padding: 4px 12px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.25);">Vision-Language</span>
+        <span style="padding: 4px 12px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.25);">Cross-Modal Generation</span>
+      </div>
     </div>
     <span style="padding: 8px 18px; background: linear-gradient(135deg, #f59e0b, #f97316); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">IEEE TMM (accepted)</span>
   </div>
