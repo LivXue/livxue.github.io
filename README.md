@@ -548,9 +548,9 @@ I'm passionate about building AI systems that can explain their reasoning proces
 
 ---
 
-<div align="center">
+## 📫 Contact
 
-### 📫 Contact
+<div align="center">
 
 <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
 
