@@ -419,7 +419,7 @@
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%); filter: blur(30px); opacity: 0.5;"></div>
   <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 280px;">
-      <p style="margin: 0 0 10px; color: #f1f5f9; font-size: 16px; line-height: 1.7; font-weight: 500;">
+      <p style="margin: 0 0 10px; color: #334155; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #0891b2; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Changsheng Xu. <em>Integrating Neural-Symbolic Reasoning With Variational Causal Inference Network for Explanatory Visual Question Answering.</em>
       </p>
     </div>
@@ -431,7 +431,7 @@
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%); filter: blur(30px); opacity: 0.5;"></div>
   <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 280px;">
-      <p style="margin: 0 0 10px; color: #f1f5f9; font-size: 16px; line-height: 1.7; font-weight: 500;">
+      <p style="margin: 0 0 10px; color: #334155; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #0284c7; font-weight: 700;">Dizhan Xue</strong>, Jing Cui, Shengsheng Qian, Chuanrui Hu, Changsheng Xu. <em>SoMe: A Realistic Benchmark for LLM-based Social Media Agents.</em>
       </p>
     </div>
@@ -443,7 +443,7 @@
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%); filter: blur(30px); opacity: 0.5;"></div>
   <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 280px;">
-      <p style="margin: 0 0 10px; color: #f1f5f9; font-size: 16px; line-height: 1.7; font-weight: 500;">
+      <p style="margin: 0 0 10px; color: #334155; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #059669; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Changsheng Xu. <em>Variational Causal Inference Network for Explanatory Visual Question Answering.</em>
       </p>
     </div>
@@ -455,7 +455,7 @@
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%); filter: blur(30px); opacity: 0.5;"></div>
   <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 280px;">
-      <p style="margin: 0 0 10px; color: #f1f5f9; font-size: 16px; line-height: 1.7; font-weight: 500;">
+      <p style="margin: 0 0 10px; color: #334155; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #d97706; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Changsheng Xu. <em>Few-Shot Multimodal Explanation for Visual Question Answering.</em>
       </p>
     </div>
@@ -467,7 +467,7 @@
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%); filter: blur(30px); opacity: 0.5;"></div>
   <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 280px;">
-      <p style="margin: 0 0 10px; color: #f1f5f9; font-size: 16px; line-height: 1.7; font-weight: 500;">
+      <p style="margin: 0 0 10px; color: #334155; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #0891b2; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Quan Fang, Changsheng Xu. <em>MMT: Image-guided Story Ending Generation with Multimodal Memory Transformer.</em>
       </p>
     </div>
@@ -479,7 +479,7 @@
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%); filter: blur(30px); opacity: 0.5;"></div>
   <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 280px;">
-      <p style="margin: 0 0 10px; color: #f1f5f9; font-size: 16px; line-height: 1.7; font-weight: 500;">
+      <p style="margin: 0 0 10px; color: #334155; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #0284c7; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Xueshan Deng, Changsheng Xu. <em>A Unified Framework for Backdoor Trigger Segmentation.</em>
       </p>
     </div>
@@ -491,7 +491,7 @@
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%); filter: blur(30px); opacity: 0.5;"></div>
   <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 280px;">
-      <p style="margin: 0 0 10px; color: #f1f5f9; font-size: 16px; line-height: 1.7; font-weight: 500;">
+      <p style="margin: 0 0 10px; color: #334155; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #059669; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Quan Fang, Changsheng Xu. <em>LININ: Logic Integrated Neural Inference Network for Explanatory Visual Question Answering.</em>
       </p>
     </div>
@@ -503,7 +503,7 @@
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%); filter: blur(30px); opacity: 0.5;"></div>
   <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 280px;">
-      <p style="margin: 0 0 10px; color: #f1f5f9; font-size: 16px; line-height: 1.7; font-weight: 500;">
+      <p style="margin: 0 0 10px; color: #334155; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #d97706; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Changsheng Xu. <em>Vision-Controllable Language Model for Image-guided Story Ending Generation.</em>
       </p>
     </div>
@@ -694,8 +694,8 @@
       <span style="color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px;">Best Paper Honorable Mention</span>
     </div>
 
-    <p style="margin: 0; color: #78350f; font-size: 15px; line-height: 1.7; font-weight: 500;">
-      Zhenyu Yang, <strong style="color: #92400e; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Weiming Dong, Changsheng Xu. <em>LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval.</em>
+    <p style="margin: 0; color: #dd641eff; font-size: 15px; line-height: 1.7; font-weight: 500;">
+      Zhenyu Yang, <strong style="color: #fc711aff; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Weiming Dong, Changsheng Xu. <em>LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval.</em>
     </p>
 
     <div style="margin-top: 12px;">
@@ -715,8 +715,8 @@
       <span style="color: white; font-size: 13px; font-weight: 700; letter-spacing: 1px;">First-Class Academic Scholarship</span>
     </div>
 
-    <p style="margin: 0; color: #0c4a6e; font-size: 15px; line-height: 1.7; font-weight: 500;">
-      <strong style="color: #0e7490; font-weight: 700;">First-Class Academic Scholarship</strong> of University of Chinese Academy of Sciences (UCAS), awarded to top students for outstanding academic performance.
+    <p style="margin: 0; color: #198fd3ff; font-size: 15px; line-height: 1.7; font-weight: 500;">
+      <strong style="color: #1cc8f8ff; font-weight: 700;">First-Class Academic Scholarship</strong> of University of Chinese Academy of Sciences (UCAS), awarded to top students for outstanding academic performance.
     </p>
 
     <div style="margin-top: 12px;">
