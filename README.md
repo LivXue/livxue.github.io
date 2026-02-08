@@ -239,12 +239,11 @@
   <div style="flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #06b6d4, transparent);"></div>
 </div>
 
----
 
 <div style="text-align: center; margin: 80px 0 60px;">
   <div style="display: inline-flex; align-items: center; gap: 16px; padding: 12px 32px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%); border: 2px solid rgba(6, 182, 212, 0.2); border-radius: 50px; backdrop-filter: blur(10px);">
     <span style="font-size: 32px; filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));">🎯</span>
-    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px;">About Me</h2>
+    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px; text-decoration: none;">About Me</h2>
   </div>
 </div>
 
@@ -286,7 +285,7 @@
 <div style="text-align: center; margin: 80px 0 60px;">
   <div style="display: inline-flex; align-items: center; gap: 16px; padding: 12px 32px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%); border: 2px solid rgba(6, 182, 212, 0.2); border-radius: 50px; backdrop-filter: blur(10px);">
     <span style="font-size: 32px; filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));">🎓</span>
-    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px;">Education</h2>
+    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px; text-decoration: none;">Education</h2>
   </div>
 </div>
 
@@ -347,12 +346,11 @@
   <div style="flex: 1; max-width: 200px; height: 1px; background: linear-gradient(90deg, transparent, #0ea5e9, transparent);"></div>
 </div>
 
----
 
 <div style="text-align: center; margin: 80px 0 60px;">
   <div style="display: inline-flex; align-items: center; gap: 16px; padding: 12px 32px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%); border: 2px solid rgba(6, 182, 212, 0.2); border-radius: 50px; backdrop-filter: blur(10px);">
     <span style="font-size: 32px; filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));">🧠</span>
-    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px;">Research Interests</h2>
+    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px; text-decoration: none;">Research Interests</h2>
   </div>
 </div>
 
@@ -401,12 +399,11 @@
   <div style="flex: 1; max-width: 200px; height: 1px; background: linear-gradient(90deg, transparent, #10b981, transparent);"></div>
 </div>
 
----
 
 <div style="text-align: center; margin: 80px 0 60px;">
   <div style="display: inline-flex; align-items: center; gap: 16px; padding: 12px 32px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%); border: 2px solid rgba(6, 182, 212, 0.2); border-radius: 50px; backdrop-filter: blur(10px);">
     <span style="font-size: 32px; filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));">📚</span>
-    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px;">Publications</h2>
+    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px; text-decoration: none;">Publications</h2>
   </div>
 </div>
 
@@ -516,7 +513,6 @@
 
 </div>
 
----
 
 <div style="text-align: center; margin: 50px 0 40px;">
   <h3 style="display: inline-flex; align-items: center; gap: 12px; margin: 0; padding: 10px 24px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%); border: 2px solid rgba(16, 185, 129, 0.2); border-radius: 30px; font-size: 20px; color: #10b981; font-weight: 700;">
@@ -687,7 +683,7 @@
 <div style="text-align: center; margin: 80px 0 60px;">
   <div style="display: inline-flex; align-items: center; gap: 16px; padding: 12px 32px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%); border: 2px solid rgba(245, 158, 11, 0.25); border-radius: 50px; backdrop-filter: blur(10px);">
     <span style="font-size: 32px; filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));">🏆</span>
-    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #f59e0b, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px;">Selected Honors</h2>
+    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #f59e0b, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px; text-decoration: none;">Selected Honors</h2>
   </div>
 </div>
 
@@ -737,12 +733,11 @@
 
 </div>
 
----
 
 <div style="text-align: center; margin: 80px 0 60px;">
   <div style="display: inline-flex; align-items: center; gap: 16px; padding: 12px 32px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%); border: 2px solid rgba(16, 185, 129, 0.2); border-radius: 50px; backdrop-filter: blur(10px);">
     <span style="font-size: 32px; filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.5));">💻</span>
-    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #10b981, #14b8a6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px;">Projects</h2>
+    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #10b981, #14b8a6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px; text-decoration: none;">Projects</h2>
   </div>
 </div>
 
@@ -790,7 +785,7 @@
 <div style="text-align: center; margin: 80px 0 60px;">
   <div style="display: inline-flex; align-items: center; gap: 16px; padding: 12px 32px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%); border: 2px solid rgba(6, 182, 212, 0.2); border-radius: 50px; backdrop-filter: blur(10px);">
     <span style="font-size: 32px; filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));">📫</span>
-    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px;">Contact</h2>
+    <h2 style="margin: 0; font-size: 28px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; letter-spacing: -1px; text-decoration: none;">Contact</h2>
   </div>
 </div>
 
@@ -885,5 +880,10 @@
   /* Link Styling */
   a {
     transition: all 0.3s ease;
+  }
+
+  /* Prevent underlines on headings */
+  h1, h2, h3, h4, h5, h6 {
+    text-decoration: none !important;
   }
 </style>
