@@ -303,7 +303,7 @@
   <div style="position: relative; z-index: 1; display: flex; align-items: flex-start; gap: 18px; margin-bottom: 16px;">
     <div style="font-size: 40px; filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.3));">🔬</div>
     <div style="flex: 1;">
-      <h3 style="margin: 0 0 10px; font-size: 20px; color: #1e293b; font-weight: 700;">PhD in Pattern Recognition and Intelligent Systems</h3>
+      <h3 style="margin: 0 0 10px; font-size: 20px; color: #e2e8f0; font-weight: 700;">PhD in Pattern Recognition and Intelligent Systems</h3>
       <p style="margin: 0; color: #0891b2; font-size: 15px; font-weight: 500;">Institute of Automation, Chinese Academy of Sciences (CASIA)</p>
     </div>
   </div>
@@ -324,7 +324,7 @@
   <div style="position: relative; z-index: 1; display: flex; align-items: flex-start; gap: 18px; margin-bottom: 16px;">
     <div style="font-size: 40px; filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.3));">🎓</div>
     <div style="flex: 1;">
-      <h3 style="margin: 0 0 10px; font-size: 20px; color: #1e293b; font-weight: 700;">Bachelor of Computer Science and Technology</h3>
+      <h3 style="margin: 0 0 10px; font-size: 20px; color: #e2e8f0; font-weight: 700;">Bachelor of Computer Science and Technology</h3>
       <p style="margin: 0; color: #059669; font-size: 15px; font-weight: 500;">University of Chinese Academy of Sciences (UCAS)</p>
     </div>
   </div>
@@ -361,8 +361,8 @@
 <div style="position: relative; padding: 32px 28px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(6, 182, 212, 0.05) 100%); border: 2px solid rgba(6, 182, 212, 0.25); border-radius: 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; cursor: pointer;">
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%); filter: blur(30px); opacity: 0; transition: opacity 0.4s ease;"></div>
   <div style="font-size: 48px; margin-bottom: 16px; filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.3)); transition: transform 0.4s ease;">🔗</div>
-  <h4 style="margin: 0 0 10px; color: #0891b2; font-size: 18px; font-weight: 700;">Multimodal Reasoning</h4>
-  <p style="margin: 0; color: #64748b; font-size: 14px; font-weight: 500;">& Explainable AI</p>
+  <h4 style="margin: 0 0 10px; color: #22d3ee; font-size: 18px; font-weight: 700;">Multimodal Reasoning</h4>
+  <p style="margin: 0; color: #cbd5e1; font-size: 14px; font-weight: 500;">& Explainable AI</p>
   <style>
     div[style*="cursor: pointer"]:hover {
       transform: translateY(-8px);
@@ -381,15 +381,15 @@
 <div style="position: relative; padding: 32px 28px; background: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0.05) 100%); border: 2px solid rgba(14, 165, 233, 0.25); border-radius: 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; cursor: pointer;">
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%); filter: blur(30px); opacity: 0; transition: opacity 0.4s ease;"></div>
   <div style="font-size: 48px; margin-bottom: 16px; filter: drop-shadow(0 4px 8px rgba(14, 165, 233, 0.3)); transition: transform 0.4s ease;">🤖</div>
-  <h4 style="margin: 0 0 10px; color: #0284c7; font-size: 18px; font-weight: 700;">Multimodal LLMs</h4>
-  <p style="margin: 0; color: #64748b; font-size: 14px; font-weight: 500;">Vision-Language Models</p>
+  <h4 style="margin: 0 0 10px; color: #38bdf8; font-size: 18px; font-weight: 700;">Multimodal LLMs</h4>
+  <p style="margin: 0; color: #cbd5e1; font-size: 14px; font-weight: 500;">Vision-Language Models</p>
 </div>
 
 <div style="position: relative; padding: 32px 28px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(16, 185, 129, 0.05) 100%); border: 2px solid rgba(16, 185, 129, 0.25); border-radius: 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; cursor: pointer;">
   <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%); filter: blur(30px); opacity: 0; transition: opacity 0.4s ease;"></div>
   <div style="font-size: 48px; margin-bottom: 16px; filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.3)); transition: transform 0.4s ease;">🎯</div>
-  <h4 style="margin: 0 0 10px; color: #059669; font-size: 18px; font-weight: 700;">LLM Agents</h4>
-  <p style="margin: 0; color: #64748b; font-size: 14px; font-weight: 500;">& Autonomous Systems</p>
+  <h4 style="margin: 0 0 10px; color: #34d399; font-size: 18px; font-weight: 700;">LLM Agents</h4>
+  <p style="margin: 0; color: #cbd5e1; font-size: 14px; font-weight: 500;">& Autonomous Systems</p>
 </div>
 
 </div>
@@ -709,7 +709,7 @@
     </p>
 
     <div style="margin-top: 12px;">
-      <span style="padding: 6px 14px; background: rgba(251, 191, 36, 0.25); color: #78350f; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.4);">ACM SIGIR 2024</span>
+      <span style="padding: 6px 14px; background: rgba(251, 191, 36, 0.25); color: #92400e; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.4);">ACM SIGIR 2024</span>
     </div>
   </div>
 </div>
@@ -730,7 +730,7 @@
     </p>
 
     <div style="margin-top: 12px;">
-      <span style="padding: 6px 14px; background: rgba(6, 182, 212, 0.25); color: #0c4a6e; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid rgba(6, 182, 212, 0.4);">2018</span>
+      <span style="padding: 6px 14px; background: rgba(6, 182, 212, 0.25); color: #0e7490; font-size: 11px; font-weight: 700; border-radius: 15px; border: 1px solid rgba(6, 182, 212, 0.4);">2018</span>
     </div>
   </div>
 </div>
@@ -753,11 +753,11 @@
   <div style="position: relative; z-index: 1; display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
     <div style="font-size: 42px; filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.3));">📧</div>
     <div>
-      <h4 style="margin: 0; color: #0891b2; font-size: 20px; font-weight: 700;">MailMind</h4>
-      <p style="margin: 4px 0 0; color: #64748b; font-size: 13px; font-weight: 500;">Email Agent</p>
+      <h4 style="margin: 0; color: #22d3ee; font-size: 20px; font-weight: 700;">MailMind</h4>
+      <p style="margin: 4px 0 0; color: #cbd5e1; font-size: 13px; font-weight: 500;">Email Agent</p>
     </div>
   </div>
-  <p style="position: relative; z-index: 1; margin: 0 0 16px; color: #64748b; font-size: 15px; line-height: 1.6;">LLM-powered multi-step email assistant for intelligent email management.</p>
+  <p style="position: relative; z-index: 1; margin: 0 0 16px; color: #cbd5e1; font-size: 15px; line-height: 1.6;">LLM-powered multi-step email assistant for intelligent email management.</p>
   <a href="https://github.com/LivXue/open-email-agent" style="position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: linear-gradient(135deg, #06b6d4, #0ea5e9); color: white; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 12px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);">
     ⚡ View Project
   </a>
@@ -768,11 +768,11 @@
   <div style="position: relative; z-index: 1; display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
     <div style="font-size: 42px; filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.3));">🔗</div>
     <div>
-      <h4 style="margin: 0; color: #059669; font-size: 20px; font-weight: 700;">GNN4CMR</h4>
-      <p style="margin: 4px 0 0; color: #64748b; font-size: 13px; font-weight: 500;">Cross-modal Retrieval</p>
+      <h4 style="margin: 0; color: #34d399; font-size: 20px; font-weight: 700;">GNN4CMR</h4>
+      <p style="margin: 4px 0 0; color: #cbd5e1; font-size: 13px; font-weight: 500;">Cross-modal Retrieval</p>
     </div>
   </div>
-  <p style="position: relative; z-index: 1; margin: 0 0 16px; color: #64748b; font-size: 15px; line-height: 1.6;">Graph Neural Network for Cross-modal Retrieval tasks.</p>
+  <p style="position: relative; z-index: 1; margin: 0 0 16px; color: #cbd5e1; font-size: 15px; line-height: 1.6;">Graph Neural Network for Cross-modal Retrieval tasks.</p>
   <a href="https://github.com/LivXue/GNN4CMR" style="position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: linear-gradient(135deg, #10b981, #14b8a6); color: white; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 12px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
     ⚡ View Project
   </a>
@@ -833,6 +833,13 @@
 </div>
 
 <style>
+  /* Global Background */
+  body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
   /* Responsive Design */
   @media (max-width: 768px) {
     h1 { font-size: 36px !important; }
