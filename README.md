@@ -438,6 +438,24 @@
   <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 280px;">
       <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
+        <strong style="color: #0284c7; font-weight: 700;">Dizhan Xue</strong>, Shengsheng Qian, Chuanrui Hu, Changsheng Xu. <em style="color: #0284c7 !important;">Short-video Propagation Influence Rating: A New Real-world Dataset and A New Large Graph Model.</em>
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">Short Video</span>
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">Propagation Influence</span>
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">Large Graph Model</span>
+        <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">Dataset</span>
+      </div>
+    </div>
+    <span style="padding: 8px 18px; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);">IEEE TKDE (accepted)</span>
+  </div>
+</div>
+
+<div style="position: relative; padding: 24px; background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(14, 165, 233, 0.04) 100%); border-left: 4px solid #0ea5e9; border-radius: 0 16px 16px 0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden;">
+  <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%); filter: blur(30px); opacity: 0.5;"></div>
+  <div style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px;">
+      <p style="margin: 0 0 10px; color: #f8fafc; font-size: 16px; line-height: 1.7; font-weight: 500;">
         <strong style="color: #0284c7; font-weight: 700;">Dizhan Xue</strong>, Jing Cui, Shengsheng Qian, Chuanrui Hu, Changsheng Xu. <em style="color: #0284c7 !important;">SoMe: A Realistic Benchmark for LLM-based Social Media Agents.</em>
       </p>
       <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
@@ -515,7 +533,7 @@
         <span style="padding: 4px 12px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 11px; font-weight: 600; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.25);">AI Security</span>
       </div>
     </div>
-    <span style="padding: 8px 18px; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);">IEEE TIP (accepted)</span>
+    <span style="padding: 8px 18px; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; font-size: 12px; font-weight: 700; border-radius: 25px; white-space: nowrap; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);">IEEE TIP 2026</span>
   </div>
 </div>
 
