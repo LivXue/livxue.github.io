@@ -725,9 +725,9 @@ a { text-decoration: none; }
   </div>
 </div>
 
-<!-- ════ FIRST-AUTHOR PUBLICATIONS ════ -->
+<!-- ════ FIRST-AUTHOR PAPERS ════ -->
 <div class="az-section-hd rv">
-  <div class="az-section-title">First-<em>author</em> Publications</div>
+  <div class="az-section-title">First-author Papers</div>
   <div class="az-section-num">03 / 07</div>
 </div>
 
