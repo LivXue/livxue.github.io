@@ -663,7 +663,7 @@ a { text-decoration: none; }
 
 <!-- Layer 1 section bg → Layer 2 cards inside -->
 <div class="az-section-bg rv d1">
-  <div class="az-about-grid">
+  <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
     <div class="az-card">
       <div class="az-about-text">
         <p>I'm a PhD candidate at the <strong>State Key Laboratory of Multimodal Artificial Intelligence Systems</strong>, Institute of Automation, Chinese Academy of Sciences (CASIA), advised by <strong>Prof. Changsheng Xu</strong>.</p>
@@ -695,7 +695,7 @@ a { text-decoration: none; }
 </div>
 
 <div class="az-section-bg rv d1">
-  <div class="az-about-grid">
+  <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
     <!-- PhD -->
     <div class="az-card">
       <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;">
