@@ -95,7 +95,6 @@ a { text-decoration: none; }
   padding: 20px;
   background: var(--layer-0);
   border: 2px solid var(--ink);
-  border-radius: 8px;
 }
 
 /* ═══════════════════════════════════════════════
@@ -103,7 +102,7 @@ a { text-decoration: none; }
    ═══════════════════════════════════════════════ */
 .az-topbar {
   background: var(--ink);
-  margin: 0 -20px;
+  margin: -20px -20px;
   padding: 11px 24px;
   display: flex;
   align-items: center;
@@ -590,7 +589,7 @@ a { text-decoration: none; }
    ═══════════════════════════════════════════════ */
 .az-footer {
   background: var(--ink);
-  margin: 60px -20px 0;
+  margin: 60px -20px -20px;
   padding: 26px 24px;
   display: flex;
   justify-content: space-between;
