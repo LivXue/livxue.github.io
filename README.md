@@ -657,7 +657,7 @@ a { text-decoration: none; }
 <!-- ════ ABOUT ════ -->
 <div class="az-section-hd rv">
   <div class="az-section-title">About</div>
-  <div class="az-section-num">01 / 05</div>
+  <div class="az-section-num">01 / 07</div>
 </div>
 
 <!-- Layer 1 section bg → Layer 2 cards inside -->
@@ -685,7 +685,7 @@ a { text-decoration: none; }
 <!-- ════ EDUCATION ════ -->
 <div class="az-section-hd rv">
   <div class="az-section-title">Education</div>
-  <div class="az-section-num">01.5 / 05</div>
+  <div class="az-section-num">02 / 07</div>
 </div>
 
 <div class="az-section-bg rv d1">
@@ -727,7 +727,7 @@ a { text-decoration: none; }
 <!-- ════ FIRST-AUTHOR PUBLICATIONS ════ -->
 <div class="az-section-hd rv">
   <div class="az-section-title">First-<em>author</em> Publications</div>
-  <div class="az-section-num">02 / 05</div>
+  <div class="az-section-num">03 / 07</div>
 </div>
 
 <!-- Layer 1 → Layer 2 pub cards inside -->
@@ -847,8 +847,8 @@ a { text-decoration: none; }
 
 <!-- ════ CO-AUTHOR PAPERS ════ -->
 <div class="az-section-hd rv">
-  <div class="az-section-title">Co-<em>authored</em> Papers</div>
-  <div class="az-section-num">03 / 05</div>
+  <div class="az-section-title">Co-authored Papers</div>
+  <div class="az-section-num">04 / 07</div>
 </div>
 
 <div class="az-section-bg rv">
@@ -977,17 +977,41 @@ a { text-decoration: none; }
   </div>
 </div>
 
+<!-- ════ PREPRINTS ════ -->
+<div class="az-section-hd rv">
+  <div class="az-section-title">Preprints</div>
+  <div class="az-section-num">05 / 07</div>
+</div>
+
+<div class="az-section-bg rv">
+  <div class="az-pub-list">
+
+    <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-in" style="border-style: dashed !important; opacity: 0.6;"></div>
+      <div class="az-pub-body" style="background: rgba(26, 20, 0, 0.03); border: 1px dashed var(--border-mid) !important;">
+        <div class="az-pub-title">A Survey on Interpretable Cross-modal Reasoning</div>
+        <div class="az-pub-authors">CoRR abs/2309.01955 (2023)</div>
+        <div class="az-pub-footer">
+          <div class="az-pub-tags"><span class="az-pub-tag">Survey</span><span class="az-pub-tag">Interpretable AI</span><span class="az-pub-tag">Cross-modal Reasoning</span></div>
+          <span class="az-venue v-arxiv">arXiv 2023</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- ════ HONORS ════ -->
 <div class="az-section-hd rv">
-  <div class="az-section-title">Select<em>ed</em> Honors</div>
-  <div class="az-section-num">04 / 05</div>
+  <div class="az-section-title">Selected Honors</div>
+  <div class="az-section-num">06 / 07</div>
 </div>
 
 <div class="az-section-bg rv">
   <div class="az-honor-grid">
     <div class="az-honor">
       <span class="az-honor-badge">Best Paper Honorable Mention</span>
-      <div class="az-honor-text"><strong>ACM SIGIR 2024</strong> — LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval. Co-authored with Zhenyu Yang et al.</div>
+      <div class="az-honor-text"><strong>ACM SIGIR 2024</strong> — LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval. (Second author)</div>
     </div>
     <div class="az-honor">
       <span class="az-honor-badge" style="background:var(--ink); color:var(--aqua);">First-Class Scholarship</span>
@@ -998,8 +1022,8 @@ a { text-decoration: none; }
 
 <!-- ════ PROJECTS ════ -->
 <div class="az-section-hd rv">
-  <div class="az-section-title">Open <em>Source</em></div>
-  <div class="az-section-num">05 / 05</div>
+  <div class="az-section-title">Open Source</div>
+  <div class="az-section-num">07 / 07</div>
 </div>
 
 <div class="az-section-bg rv">
