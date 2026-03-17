@@ -626,22 +626,21 @@ a { text-decoration: none; }
 <!-- TOP BAR -->
 <div class="az-topbar">
   <div class="az-topbar-left"><span class="az-topbar-dot"></span>NODE ACTIVE · CASIA · BEIJING</div>
-  <div class="az-topbar-right">Multimodal AI Systems</div>
+  <div class="az-topbar-right">Multimodal AI</div>
 </div>
 
 <!-- ════ HERO ════ -->
 <div class="az-hero">
-  <div class="az-hero-eyebrow">PhD Candidate · Institute of Automation · CAS</div>
+  <div class="az-hero-eyebrow">PhD Candidate · Institute of Automation · Chinese Academy of Sciences</div>
   <h1 class="az-hero-name" data-text="Dizhan Xue">Dizhan <span>Xue</span></h1>
   <p class="az-hero-role">State Key Laboratory of Multimodal Artificial Intelligence Systems</p>
   <p class="az-hero-desc">
     Researcher at <strong>CASIA</strong>, advised by Prof. Changsheng Xu.<br>
-    Building toward <strong>AGI through multimodal reasoning</strong> — with a current focus
-    on <strong>LLM Agents</strong> and their capacity for open-world intelligence.
+    Building toward <strong>AGI through multimodal reasoning</strong> — with a current focus on <strong>LLM Agents</strong> and their capacity for open-world intelligence.
   </p>
   <div class="az-social-row">
     <a href="mailto:xuedizhan17@mails.ucas.ac.cn" class="az-social-btn">Email</a>
-    <a href="https://scholar.google.com/citations?user=0000000000" class="az-social-btn">Scholar</a>
+    <a href="https://scholar.google.com/citations?user=V5Aeh_oAAAAJ" class="az-social-btn">Scholar</a>
     <a href="https://dblp.org/pid/293/9621" class="az-social-btn">DBLP</a>
     <a href="https://github.com/LivXue" class="az-social-btn">GitHub</a>
   </div>
@@ -649,15 +648,15 @@ a { text-decoration: none; }
 
 <!-- ════ STATS (Ink bg, Chartreuse numbers) ════ -->
 <div class="az-stats rv">
-  <div class="az-stat"><span class="az-stat-num">9+</span><span class="az-stat-label">Publications</span></div>
-  <div class="az-stat"><span class="az-stat-num">5</span><span class="az-stat-label">Top Venues</span></div>
-  <div class="az-stat"><span class="az-stat-num">1</span><span class="az-stat-label">Best Paper</span></div>
-  <div class="az-stat"><span class="az-stat-num">2</span><span class="az-stat-label">Open Source</span></div>
+  <div class="az-stat"><span class="az-stat-num">20+</span><span class="az-stat-label">Publications</span></div>
+  <div class="az-stat"><span class="az-stat-num">9</span><span class="az-stat-label">First-author Papers</span></div>
+  <div class="az-stat"><span class="az-stat-num">4</span><span class="az-stat-label">Top Conferences</span></div>
+  <div class="az-stat"><span class="az-stat-num">5</span><span class="az-stat-label">Top Journals</span></div>
 </div>
 
 <!-- ════ ABOUT ════ -->
 <div class="az-section-hd rv">
-  <div class="az-section-title">Ab<em>out</em></div>
+  <div class="az-section-title">About</div>
   <div class="az-section-num">01 / 05</div>
 </div>
 
@@ -666,23 +665,18 @@ a { text-decoration: none; }
   <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
     <div class="az-card">
       <div class="az-about-text">
-        <p>I'm a PhD candidate at the <strong>State Key Laboratory of Multimodal Artificial Intelligence Systems</strong>, Institute of Automation, Chinese Academy of Sciences (CASIA), advised by <strong>Prof. Changsheng Xu</strong>.</p>
+        <p>I'm a PhD candidate at <strong>State Key Laboratory of Multimodal Artificial Intelligence Systems</strong>, Institute of Automation, Chinese Academy of Sciences (CASIA), advised by <strong>Prof. Changsheng Xu</strong>.</p>
         <p>My core research focuses on enabling AI to understand and reason across complex multimodal information. I believe that <strong>multimodal intelligence is the essential pathway to AGI</strong>. Recently, I've been particularly interested in <strong>LLM Agents</strong> and their capabilities in sophisticated reasoning tasks.</p>
       </div>
     </div>
     <div class="az-card">
       <span class="az-chip-label">Research Interests</span>
       <div class="az-chips">
-        <span class="az-chip">Multimodal Learning</span>
+        <span class="az-chip">Multimodal Reasoning</span>
         <span class="az-chip">LLM Agents</span>
-        <span class="az-chip">Visual QA</span>
-        <span class="az-chip">Causal Inference</span>
-        <span class="az-chip">Cross-Modal Retrieval</span>
         <span class="az-chip">Explainable AI</span>
-        <span class="az-chip">AI Security</span>
-        <span class="az-chip">Vision-Language</span>
-        <span class="az-chip">Graph Neural Networks</span>
-        <span class="az-chip">Social Media AI</span>
+        <span class="az-chip">Vision-Language Models</span>
+        <span class="az-chip">Social Media Analysis</span>
       </div>
     </div>
   </div>
@@ -690,7 +684,7 @@ a { text-decoration: none; }
 
 <!-- ════ EDUCATION ════ -->
 <div class="az-section-hd rv">
-  <div class="az-section-title">Edu<em>cation</em></div>
+  <div class="az-section-title">Education</div>
   <div class="az-section-num">01.5 / 05</div>
 </div>
 
@@ -718,7 +712,7 @@ a { text-decoration: none; }
         <span style="font-size: 24px;">🎓</span>
         <div style="flex: 1;">
           <div style="font-family: var(--font-serif); font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 4px;">Bachelor of Computer Science and Technology</div>
-          <div style="font-size: 12px; color: var(--text-tertiary);">University of Chinese Academy of Sciences (UCAS)</div>
+          <div style="font-size: 12px; color: var(--text-tertiary);">University of Chinese Academy of Sciences (UCAS) (\#3 in China by national avg. admission score)</div>
         </div>
       </div>
       <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.8;">
@@ -860,8 +854,20 @@ a { text-decoration: none; }
 <div class="az-section-bg rv">
   <div class="az-pub-list">
 
-    <div class="az-pub">
-      <div class="az-pub-stripe" style="background:var(--chartreuse);"></div>
+    <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-in"></div>
+      <div class="az-pub-body">
+        <div class="az-pub-title">Integrating Multi-Label Contrastive Learning with Dual Adversarial Graph Neural Networks for Cross-Modal Retrieval</div>
+        <div class="az-pub-authors">Shengsheng Qian, <span class="me">Dizhan Xue</span>, Quan Fang, Changsheng Xu</div>
+        <div class="az-pub-footer">
+          <div class="az-pub-tags"><span class="az-pub-tag">Cross-Modal Retrieval</span><span class="az-pub-tag">Contrastive Learning</span><span class="az-pub-tag">Graph Neural Networks</span></div>
+          <span class="az-venue v-top">IEEE TPAMI 2022</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-ch"></div>
       <div class="az-pub-body">
         <div class="az-pub-title">LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval</div>
         <div class="az-pub-authors">Zhenyu Yang, <span class="me">Dizhan Xue</span>, Shengsheng Qian, Weiming Dong, Changsheng Xu</div>
@@ -873,13 +879,97 @@ a { text-decoration: none; }
     </div>
 
     <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-aq"></div>
+      <div class="az-pub-body">
+        <div class="az-pub-title">BadAgent: Inserting and Activating Backdoor Attacks in LLM Agents</div>
+        <div class="az-pub-authors">Yifei Wang, <span class="me">Dizhan Xue</span>, Shengjie Zhang, Shengsheng Qian</div>
+        <div class="az-pub-footer">
+          <div class="az-pub-tags"><span class="az-pub-tag">Backdoor Attack</span><span class="az-pub-tag">LLM Agents</span><span class="az-pub-tag">AI Security</span></div>
+          <span class="az-venue v-top">ACL 2024</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-vr"></div>
+      <div class="az-pub-body">
+        <div class="az-pub-title">Dual Adversarial Graph Neural Networks for Multi-Label Cross-Modal Retrieval</div>
+        <div class="az-pub-authors">Shengsheng Qian, <span class="me">Dizhan Xue</span>, Quan Fang, Changsheng Xu</div>
+        <div class="az-pub-footer">
+          <div class="az-pub-tags"><span class="az-pub-tag">Cross-Modal Retrieval</span><span class="az-pub-tag">Adversarial Learning</span><span class="az-pub-tag">Graph Neural Networks</span></div>
+          <span class="az-venue v-top">AAAI 2021</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-or"></div>
+      <div class="az-pub-body">
+        <div class="az-pub-title">Nonparametric Clustering-Guided Cross-View Contrastive Learning for Partially View-Aligned Representation Learning</div>
+        <div class="az-pub-authors">Shengsheng Qian, <span class="me">Dizhan Xue</span>, Jun Hu, Huaiwen Zhang, Changsheng Xu</div>
+        <div class="az-pub-footer">
+          <div class="az-pub-tags"><span class="az-pub-tag">Contrastive Learning</span><span class="az-pub-tag">Partially Aligned</span><span class="az-pub-tag">Clustering</span></div>
+          <span class="az-venue v-top">IEEE TIP 2024</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-pub coauthor">
       <div class="az-pub-stripe s-in"></div>
       <div class="az-pub-body">
-        <div class="az-pub-title">Short-Video Propagation Influence Rating: A New Real-world Dataset and A New Large Graph Model</div>
-        <div class="az-pub-authors">CoRR abs/2503.23746 (2025)</div>
+        <div class="az-pub-title">Adaptive Label-Aware Graph Convolutional Networks for Cross-Modal Retrieval</div>
+        <div class="az-pub-authors">Shengsheng Qian, <span class="me">Dizhan Xue</span>, Quan Fang, Changsheng Xu</div>
         <div class="az-pub-footer">
-          <div class="az-pub-tags"><span class="az-pub-tag">arXiv</span></div>
-          <span class="az-venue v-arxiv">arXiv 2025</span>
+          <div class="az-pub-tags"><span class="az-pub-tag">Cross-Modal Retrieval</span><span class="az-pub-tag">Graph Convolutional Networks</span><span class="az-pub-tag">Label-Aware</span></div>
+          <span class="az-venue v-top">IEEE TMM 2021</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-ch"></div>
+      <div class="az-pub-body">
+        <div class="az-pub-title">Open-World Social Event Classification</div>
+        <div class="az-pub-authors">Shengsheng Qian, Hong Chen, <span class="me">Dizhan Xue</span>, Quan Fang, Changsheng Xu</div>
+        <div class="az-pub-footer">
+          <div class="az-pub-tags"><span class="az-pub-tag">Social Event</span><span class="az-pub-tag">Open-World</span><span class="az-pub-tag">Classification</span></div>
+          <span class="az-venue v-top">WWW 2023</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-aq"></div>
+      <div class="az-pub-body">
+        <div class="az-pub-title">Semantic Editing Increment Benefits Zero-Shot Composed Image Retrieval</div>
+        <div class="az-pub-authors">Zhenyu Yang, Shengsheng Qian, <span class="me">Dizhan Xue</span>, Jiahong Wu, Fan Yang, Weiming Dong, Changsheng Xu</div>
+        <div class="az-pub-footer">
+          <div class="az-pub-tags"><span class="az-pub-tag">Composed Retrieval</span><span class="az-pub-tag">Zero-Shot</span><span class="az-pub-tag">Semantic Editing</span></div>
+          <span class="az-venue v-top">ACM MM 2024</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-vr"></div>
+      <div class="az-pub-body">
+        <div class="az-pub-title">Learning Temporal Event Knowledge for Continual Social Event Classification</div>
+        <div class="az-pub-authors">Shengsheng Qian, Shengjie Zhang, <span class="me">Dizhan Xue</span>, Huaiwen Zhang, Changsheng Xu</div>
+        <div class="az-pub-footer">
+          <div class="az-pub-tags"><span class="az-pub-tag">Temporal Knowledge</span><span class="az-pub-tag">Continual Learning</span><span class="az-pub-tag">Social Event</span></div>
+          <span class="az-venue v-top">IEEE TKDE 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="az-pub coauthor">
+      <div class="az-pub-stripe s-or"></div>
+      <div class="az-pub-body">
+        <div class="az-pub-title">SVBench: A Benchmark with Temporal Multi-Turn Dialogues for Streaming Video Understanding</div>
+        <div class="az-pub-authors">Zhenyu Yang, Yuhang Hu, Zemin Du, <span class="me">Dizhan Xue</span>, Shengsheng Qian, Jiahong Wu, Fan Yang, Weiming Dong, Changsheng Xu</div>
+        <div class="az-pub-footer">
+          <div class="az-pub-tags"><span class="az-pub-tag">Streaming Video</span><span class="az-pub-tag">Multi-Turn Dialogue</span><span class="az-pub-tag">Benchmark</span></div>
+          <span class="az-venue v-top">ICLR 2025</span>
         </div>
       </div>
     </div>
