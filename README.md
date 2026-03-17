@@ -161,7 +161,7 @@ a { text-decoration: none; }
 }
 .az-hero-name {
   font-family: var(--font-serif);
-  font-size: clamp(52px, 9vw, 88px);
+  font-size: 52px;
   font-weight: 300;
   letter-spacing: -3px;
   line-height: 0.92;
@@ -640,7 +640,7 @@ a { text-decoration: none; }
     on <strong>LLM Agents</strong> and their capacity for open-world intelligence.
   </p>
   <div class="az-social-row">
-    <a href="/cdn-cgi/l/email-protection#a9d1cdd3e9c0c887c8ca87cac7" class="az-social-btn">Email</a>
+    <a href="mailto:xuedizhan17@mails.ucas.ac.cn" class="az-social-btn">Email</a>
     <a href="https://scholar.google.com/citations?user=0000000000" class="az-social-btn">Scholar</a>
     <a href="https://dblp.org/pid/293/9621" class="az-social-btn">DBLP</a>
     <a href="https://github.com/LivXue" class="az-social-btn">GitHub</a>
@@ -683,6 +683,48 @@ a { text-decoration: none; }
         <span class="az-chip">Vision-Language</span>
         <span class="az-chip">Graph Neural Networks</span>
         <span class="az-chip">Social Media AI</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ EDUCATION ════ -->
+<div class="az-section-hd rv">
+  <div class="az-section-title">Edu<em>cation</em></div>
+  <div class="az-section-num">01.5 / 05</div>
+</div>
+
+<div class="az-section-bg rv d1">
+  <div class="az-about-grid">
+    <!-- PhD -->
+    <div class="az-card">
+      <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;">
+        <span style="font-size: 24px;">🔬</span>
+        <div style="flex: 1;">
+          <div style="font-family: var(--font-serif); font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 4px;">PhD in Pattern Recognition and Intelligent Systems</div>
+          <div style="font-size: 12px; color: var(--text-tertiary);">Institute of Automation, Chinese Academy of Sciences (CASIA)</div>
+        </div>
+      </div>
+      <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.8;">
+        <strong>📅</strong> Sep 2021 - Jun 2026<br>
+        <strong>👨‍🏫</strong> Advisor: <span style="color: var(--text-primary);">Prof. Changsheng Xu</span><br>
+        <strong>📝</strong> Thesis: <span style="color: var(--text-primary);">Reliable Multimodal Reasoning in Complicated Scenarios</span>
+      </div>
+    </div>
+
+    <!-- Bachelor -->
+    <div class="az-card">
+      <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;">
+        <span style="font-size: 24px;">🎓</span>
+        <div style="flex: 1;">
+          <div style="font-family: var(--font-serif); font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 4px;">Bachelor of Computer Science and Technology</div>
+          <div style="font-size: 12px; color: var(--text-tertiary);">University of Chinese Academy of Sciences (UCAS)</div>
+        </div>
+      </div>
+      <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.8;">
+        <strong>📅</strong> Sep 2017 - Jun 2021<br>
+        <strong>👨‍🏫</strong> Advisor: <span style="color: var(--text-primary);">Prof. Changsheng Xu</span><br>
+        <strong>📝</strong> Thesis: <span style="color: var(--text-primary);">Debiased Short Video Recommendation Based on Counterfactual Reasoning</span>
       </div>
     </div>
   </div>
@@ -876,14 +918,14 @@ a { text-decoration: none; }
       <span class="az-proj-icon">📧</span>
       <div class="az-proj-name">MailMind</div>
       <div class="az-proj-type">Email Agent</div>
-      <div class="az-proj-desc">LLM-powered multi-step email assistant for intelligent email management and autonomous task execution.</div>
+      <div class="az-proj-desc">LLM-powered multi-step email assistant for intelligent email management.</div>
       <a href="https://github.com/LivXue/open-email-agent" class="az-proj-link">View on GitHub →</a>
     </div>
     <div class="az-proj">
       <span class="az-proj-icon">🔗</span>
       <div class="az-proj-name">GNN4CMR</div>
       <div class="az-proj-type">Cross-modal Retrieval</div>
-      <div class="az-proj-desc">Graph Neural Network toolkit and unified framework for Cross-modal Retrieval tasks and benchmarking.</div>
+      <div class="az-proj-desc">Graph Neural Network and Toolkits for Cross-modal Retrieval tasks.</div>
       <a href="https://github.com/LivXue/GNN4CMR" class="az-proj-link">View on GitHub →</a>
     </div>
   </div>
@@ -898,7 +940,7 @@ a { text-decoration: none; }
   <div class="az-contact-grid">
     <div class="az-contact-card">
       <span class="az-contact-icon">📧</span>
-      <div class="az-contact-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f170b152f060e410e0c410c01">[email&#160;protected]</a></div>
+      <div class="az-contact-val">xuedizhan17@mails.ucas.ac.cn</div>
     </div>
     <div class="az-contact-card">
       <span class="az-contact-icon">🌐</span>
@@ -913,4 +955,8 @@ a { text-decoration: none; }
 
 <!-- ════ FOOTER (Ink dark) ════ -->
 <div class="az-footer">
-  <div class="az-footer-l">© 2025 Dizhan Xue · CASI
+  <div class="az-footer-l">© 2025 Dizhan Xue · State Key Laboratory of Multimodal Artificial Intelligence Systems</div>
+  <div class="az-footer-r">Built with passion for multimodal AI & intelligent systems</div>
+</div>
+
+</div>
