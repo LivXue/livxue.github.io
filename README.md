@@ -154,7 +154,7 @@ a { text-decoration: none; }
 }
 .az-hero-name {
   font-family: var(--font-serif);
-  font-size: clamp(64px, 64px, 110px);
+  font-size: 64px;
   font-weight: 300;
   letter-spacing: -3px;
   line-height: 0.92;
