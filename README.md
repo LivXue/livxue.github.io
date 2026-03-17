@@ -64,6 +64,13 @@
   60% { clip-path:inset(60% 0 10% 0); transform:translateX(-3px); }
   80% { clip-path:inset(80% 0  0% 0); transform:translateX(2px); }
 }
+@keyframes glitchSlide2 {
+  0%,100% { clip-path:inset(0 0 100% 0); transform:translateX(0); }
+  20% { clip-path:inset(20% 0 55% 0); transform:translateX(5px); }
+  40% { clip-path:inset(45% 0 25% 0); transform:translateX(-3px); }
+  60% { clip-path:inset(65% 0 5%  0); transform:translateX(4px); }
+  80% { clip-path:inset(85% 0  0% 0); transform:translateX(-2px); }
+}
 
 /* ═══════════════════════════════════════════════
    BASE RESET
@@ -154,7 +161,7 @@ a { text-decoration: none; }
 }
 .az-hero-name {
   font-family: var(--font-serif);
-  font-size: 64px;
+  font-size: clamp(52px, 9vw, 88px);
   font-weight: 300;
   letter-spacing: -3px;
   line-height: 0.92;
@@ -163,14 +170,23 @@ a { text-decoration: none; }
   position: relative;
   display: inline-block;
 }
-/* Glitch ghost layer — Chartreuse tint */
+/* Glitch ghost layer 1 — Vermillion, terracotta */
 .az-hero-name::before {
   content: attr(data-text);
   position: absolute; top: 0; left: 0;
-  color: var(--chartreuse);
-  opacity: 0.55;
+  color: var(--vermillion);
+  opacity: 0.28;
   pointer-events: none;
   animation: glitchSlide 6s ease-in-out infinite;
+}
+/* Glitch ghost layer 2 — Oxblood, opposite offset, delayed */
+.az-hero-name::after {
+  content: attr(data-text);
+  position: absolute; top: 0; left: 0;
+  color: var(--oxblood);
+  opacity: 0.20;
+  pointer-events: none;
+  animation: glitchSlide2 6s 1.5s ease-in-out infinite;
 }
 /* Chartreuse underline on "Xue" */
 .az-hero-name span {
@@ -615,7 +631,7 @@ a { text-decoration: none; }
 
 <!-- ════ HERO ════ -->
 <div class="az-hero">
-  <div class="az-hero-eyebrow">PhD Candidate · Institute of Automation · Chinese Academy of Sciences</div>
+  <div class="az-hero-eyebrow">PhD Candidate · Institute of Automation · CAS</div>
   <h1 class="az-hero-name" data-text="Dizhan Xue">Dizhan <span>Xue</span></h1>
   <p class="az-hero-role">State Key Laboratory of Multimodal Artificial Intelligence Systems</p>
   <p class="az-hero-desc">
