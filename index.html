@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src * 'self' data: https: file:; script-src * 'unsafe-inline'; style-src * 'unsafe-inline' https: file:; font-src * https: file:;">
+    <title>Markdown: Rich Preview</title>
+    <link rel="stylesheet" href="file:///home/xuedizhan/.trae-cn-server/extensions/nur-srijan.markdown-rich-preview-1.2.0-universal/assets/vendor/highlight/styles/github-dark.min.css" onerror="console.error('Failed to load Highlight.js CSS:', this.href)">
+    <link rel="stylesheet" href="file:///home/xuedizhan/.trae-cn-server/extensions/nur-srijan.markdown-rich-preview-1.2.0-universal/assets/vendor/katex/katex.min.css" onerror="console.error('Failed to load KaTeX CSS:', this.href)">
+    <script>
+        // Highlighting is done on the extension side during markdown parsing.
+        // No browser-side initialization of highlight.js is needed.
+
+        // Copy to clipboard function
+        function copyToClipboard(button) {
+            const codeBlock = button.closest('.code-block');
+            const code = codeBlock.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.backgroundColor = '#4CAF50';
+                button.style.color = 'white';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.backgroundColor = '';
+                    button.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+    <style>
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+        img.emoji {
+            height: 1em;
+            width: 1em;
+            margin: 0 .05em 0 .1em;
+            vertical-align: -0.1em;
+            display: inline;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            line-height: 1.25;
+        }
+        h1 { 
+            font-size: 2em; 
+            border-bottom: 1px solid #eaecef; 
+            padding-bottom: 0.3em;
+            margin-top: 0.67em 0;
+        }
+        h2 { 
+            font-size: 1.5em; 
+            border-bottom: 1px solid #eaecef; 
+            padding-bottom: 0.3em;
+            margin-top: 1.5em;
+        }
+        h3 { 
+            font-size: 1.25em; 
+            margin-top: 1.25em;
+        }
+        h4 { 
+            font-size: 1em; 
+            margin-top: 1em;
+        }
+        a { 
+            color: #0366d6; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        strong { 
+            font-weight: 600; 
+        }
+        pre {
+            background-color:rgb(9, 7, 10);
+            overflow: auto;
+            margin: 0;
+        }
+        code {
+            font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+            padding: 0.2em 0.4em;
+            font-size: 90%;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        .code-block {
+            position: relative;
+            background-color:rgb(9, 7, 10);
+            border-radius: 6px;
+            margin: 1em 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 10px;
+            background-color:rgb(32, 30, 43);
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+        .language {
+            color: #efe9e9;
+            font-size: 0.9em;
+            font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        .copy-button {
+            padding: 4px 8px;
+            font-size: 0.9em;
+            color: #efe9e9;
+            background-color: transparent;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .copy-button:hover {
+            background-color: #e9e9e9;
+            border-color: #ccc;
+        }
+        blockquote {
+            margin: 0;
+            padding: 0 1em;
+            color: #6a737d;
+            border-left: 0.25em solid #dfe2e5;
+        }
+        ul, ol {
+            padding-left: 2em;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            overflow: auto;
+            margin-bottom: 16px;
+        }
+        table th {
+            font-weight: 600;
+        }
+        table th, table td {
+            padding: 6px 13px;
+            border: 1px solid var(--vscode-editorGroup-border, #dfe2e5);
+        }
+        table tr {
+            background-color: var(--vscode-editor-background, #fff);
+            border-top: 1px solid var(--vscode-editorGroup-border, #c6cbd1);
+        }
+        table tr:nth-child(2n) {
+            background-color: var(--vscode-list-hoverBackground, #f6f8fa);
+        }
+        img {
+            max-width: 100%;
+            box-sizing: content-box;
+        }
+        /* GitHub-style Alerts */
+        .markdown-alert {
+            padding: 0.25rem 1rem;
+            margin-bottom: 1rem;
+            color: inherit;
+            border-left: 0.25em solid #dfe2e5;
+            border-radius: 6px;
+        }
+        .markdown-alert-title {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            line-height: 1;
+        }
+        .markdown-alert-title svg {
+            margin-right: 8px;
+        }
+        .markdown-alert-note { border-left-color: #0969da; }
+        .markdown-alert-note .markdown-alert-title { color: #0969da; }
+        .markdown-alert-tip { border-left-color: #1a7f37; }
+        .markdown-alert-tip .markdown-alert-title { color: #1a7f37; }
+        .markdown-alert-important { border-left-color: #8250df; }
+        .markdown-alert-important .markdown-alert-title { color: #8250df; }
+        .markdown-alert-warning { border-left-color: #9a6700; }
+        .markdown-alert-warning .markdown-alert-title { color: #9a6700; }
+        .markdown-alert-caution { border-left-color: #d1242f; }
+        .markdown-alert-caution .markdown-alert-title { color: #d1242f; }
+
+        /* Footnotes */
+        .footnotes {
+            font-size: 12px;
+            color: #6a737d;
+            border-top: 1px solid #dfe2e5;
+            margin-top: 24px;
+        }
+        .footnotes ol {
+            padding-left: 16px;
+        }
+        .footnote-backref {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin-left: 4px;
+        }
+
+        /* Task Lists */
+        ul.contains-task-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .task-list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+        .task-list-item input[type="checkbox"] {
+            margin: 0.25em 0.5em 0 0;
+            vertical-align: middle;
+        }
+
+        /* Front Matter */
+        .front-matter {
+            margin-bottom: 24px;
+            border: 1px solid var(--vscode-editorGroup-border, #dfe2e5);
+            border-radius: 6px;
+            padding: 12px;
+            background-color: var(--vscode-list-hoverBackground, #f6f8fa);
+        }
+        .front-matter table {
+            margin-bottom: 0;
+            border: none;
+        }
+        .front-matter table tr {
+            background-color: transparent;
+            border: none;
+        }
+        .front-matter table td {
+            border: none;
+            padding: 4px 8px;
+        }
+        .front-matter-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: var(--vscode-descriptionForeground, #6a737d);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600&family=Geist+Mono:wght@300;400;500;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ═══════════════════════════════════════════════
+   AZTEC OFFICIAL DESIGN TOKENS
+   ═══════════════════════════════════════════════ */
+:root {
+  /* ── Official Aztec Brand Colors ── */
+  --parchment:    #F2EEE1;
+  --ink:          #1A1400;
+  --chartreuse:   #D4FF28;
+  --orchid:       #FF2DF4;
+  --aqua:         #2BFAE9;
+  --vermillion:   #FF1A1A;
+  --malachite:    #001F18;
+  --aubergine:    #2E0026;
+  --lapis:        #00122E;
+  --oxblood:      #2E0700;
+
+  /* ── Nested Layer Hierarchy (page → deepest card) ── */
+  --layer-0:  #F2EEE1;   /* Page bg: Parchment            */
+  --layer-1:  #E8E3D2;   /* Section container: warm linen */
+  --layer-2:  #DDD7C4;   /* Card: deeper parchment        */
+  --layer-3:  #CFC8B2;   /* Inner / hover: warm tan       */
+
+  /* ── Text ── */
+  --text-primary:   #1A1400;
+  --text-secondary: #3D3520;
+  --text-tertiary:  #6B6040;
+  --text-muted:     #9A9078;
+  --text-on-dark:   #F2EEE1;
+
+  /* ── Borders ── */
+  --border-light:  rgba(26,20,0,0.10);
+  --border-mid:    rgba(26,20,0,0.18);
+  --border-strong: rgba(26,20,0,0.35);
+
+  /* ── Typography ── */
+  --font-serif: 'Martel', Georgia, serif;
+  --font-mono:  'Geist Mono', 'Courier New', monospace;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+}
+
+/* ═══════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(18px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes blink {
+  0%,100% { opacity:1; } 50% { opacity:0; }
+}
+@keyframes glitchSlide {
+  0%,100% { clip-path:inset(0 0 100% 0); transform:translateX(0); }
+  20% { clip-path:inset(15% 0 60% 0); transform:translateX(-4px); }
+  40% { clip-path:inset(40% 0 30% 0); transform:translateX(4px); }
+  60% { clip-path:inset(60% 0 10% 0); transform:translateX(-3px); }
+  80% { clip-path:inset(80% 0  0% 0); transform:translateX(2px); }
+}
+@keyframes glitchSlide2 {
+  0%,100% { clip-path:inset(0 0 100% 0); transform:translateX(0); }
+  20% { clip-path:inset(20% 0 55% 0); transform:translateX(5px); }
+  40% { clip-path:inset(45% 0 25% 0); transform:translateX(-3px); }
+  60% { clip-path:inset(65% 0 5%  0); transform:translateX(4px); }
+  80% { clip-path:inset(85% 0  0% 0); transform:translateX(-2px); }
+}
+
+/* ═══════════════════════════════════════════════
+   BASE RESET
+   ═══════════════════════════════════════════════ */
+body, .markdown-body {
+  background: var(--layer-0) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+}
+h1,h2,h3,h4,h5,h6 {
+  text-decoration:none !important; border:none !important;
+  border-bottom:none !important; box-shadow:none !important;
+}
+a { text-decoration: none; }
+
+/* ═══════════════════════════════════════════════
+   PAGE WRAPPER
+   ═══════════════════════════════════════════════ */
+.az-page {
+  max-width: 860px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--layer-0);
+  border: 2px solid var(--ink);
+}
+
+/* ═══════════════════════════════════════════════
+   TOP BAR — Ink dark strip
+   ═══════════════════════════════════════════════ */
+.az-topbar {
+  background: var(--ink);
+  margin: -20px -20px;
+  padding: 11px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.az-topbar-left {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(242,238,225,0.45);
+}
+.az-topbar-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--chartreuse);
+  box-shadow: 0 0 7px var(--chartreuse);
+  animation: blink 2s step-end infinite;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.az-topbar-right {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--chartreuse);
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════ */
+.az-hero {
+  padding: 68px 0 56px;
+  border-bottom: 1px solid var(--border-light);
+  animation: fadeUp 0.7s ease both;
+}
+.az-hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.az-hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px; height: 1px;
+  background: var(--text-muted);
+}
+.az-hero-name {
+  font-family: var(--font-serif);
+  font-size: 52px;
+  font-weight: 300;
+  letter-spacing: -3px;
+  line-height: 0.92;
+  color: var(--ink);
+  margin-bottom: 22px;
+  position: relative;
+  display: inline-block;
+}
+/* Glitch ghost layer 1 — Vermillion, terracotta */
+.az-hero-name::before {
+  content: attr(data-text);
+  position: absolute; top: 0; left: 0;
+  color: var(--vermillion);
+  opacity: 0.28;
+  pointer-events: none;
+  animation: glitchSlide 6s ease-in-out infinite;
+}
+/* Glitch ghost layer 2 — Oxblood, opposite offset, delayed */
+.az-hero-name::after {
+  content: attr(data-text);
+  position: absolute; top: 0; left: 0;
+  color: var(--oxblood);
+  opacity: 0.20;
+  pointer-events: none;
+  animation: glitchSlide2 6s 1.5s ease-in-out infinite;
+}
+/* Chartreuse underline on "Xue" */
+.az-hero-name span {
+  position: relative;
+  display: inline-block;
+}
+.az-hero-name span::after {
+  content: '';
+  position: absolute;
+  bottom: 4px; left: 0; right: 0;
+  height: 5px;
+  background: var(--chartreuse);
+  opacity: 0.85;
+}
+.az-hero-role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 22px;
+}
+.az-hero-desc {
+  font-size: 15px;
+  line-height: 1.78;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+.az-hero-desc strong { color: var(--ink); font-weight: 600; }
+
+.az-social-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.az-social-btn {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 9px 18px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+  display: inline-block;
+}
+.az-social-btn:hover {
+  background: var(--ink);
+  color: var(--parchment);
+  border-color: var(--ink);
+}
+
+/* ═══════════════════════════════════════════════
+   STATS — Ink background, Chartreuse numbers
+   ═══════════════════════════════════════════════ */
+.az-stats {
+  background: var(--ink);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 40px 0;
+  border-radius: 6px;
+  overflow: hidden;
+  animation: fadeUp 0.7s 0.12s ease both;
+}
+@media(max-width:580px){ .az-stats{grid-template-columns:repeat(2,1fr);} }
+
+.az-stat {
+  padding: 28px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(242,238,225,0.06);
+}
+.az-stat:last-child { border-right: none; }
+.az-stat-num {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 300;
+  color: var(--chartreuse);
+  display: block;
+  letter-spacing: -1px;
+  margin-bottom: 3px;
+}
+.az-stat-label {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(242,238,225,0.3);
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION HEADER
+   ═══════════════════════════════════════════════ */
+.az-section-hd {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 52px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+.az-section-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+}
+.az-section-title em { font-style: italic; color: var(--text-tertiary); }
+.az-section-num {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+/* ═══════════════════════════════════════════════
+   LAYERED CONTAINERS
+   Layer 0 (page) → Layer 1 (section bg) → Layer 2 (card) → Layer 3 (inner/hover)
+   ═══════════════════════════════════════════════ */
+
+/* Layer 1 — section wrapper */
+.az-section-bg {
+  background: var(--layer-1);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid var(--border-light);
+  margin-bottom: 4px;
+}
+
+/* Layer 2 — card */
+.az-card {
+  background: var(--layer-2);
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
+  padding: 20px 22px;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.az-card:hover {
+  border-color: var(--border-strong);
+  background: var(--layer-3);
+}
+
+/* ═══════════════════════════════════════════════
+   ABOUT
+   ═══════════════════════════════════════════════ */
+.az-about-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 10px;
+}
+@media(max-width:620px){ .az-about-grid{grid-template-columns:1fr;} }
+
+.az-about-text {
+  font-size: 14px;
+  line-height: 1.78;
+  color: var(--text-secondary);
+}
+.az-about-text strong { color: var(--ink); }
+.az-about-text p { margin-bottom: 12px; }
+.az-about-text p:last-child { margin-bottom: 0; }
+
+.az-chip-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  display: block;
+}
+.az-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.az-chip {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background: var(--layer-0);
+  border: 1px solid var(--border-mid);
+  border-radius: 3px;
+  color: var(--text-tertiary);
+  transition: all 0.14s;
+}
+.az-chip:hover {
+  background: var(--ink);
+  color: var(--chartreuse);
+  border-color: var(--ink);
+}
+
+/* ═══════════════════════════════════════════════
+   PUBLICATION CARDS — Layer 2 inside Layer 1
+   ═══════════════════════════════════════════════ */
+.az-pub-list { display: flex; flex-direction: column; gap: 8px; }
+
+.az-pub {
+  background: var(--layer-2);
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  transition: border-color 0.15s, background 0.15s;
+}
+.az-pub:hover {
+  border-color: var(--border-strong);
+  background: var(--layer-3);
+}
+
+.az-pub-stripe { width: 3px; flex-shrink: 0; }
+/* Stripe colors using Aztec brand palette */
+.s-ch { background: var(--chartreuse); }
+.s-aq { background: var(--aqua); }
+.s-or { background: var(--orchid); }
+.s-vr { background: var(--vermillion); }
+.s-in { background: var(--ink); opacity: 0.4; }
+
+.az-pub-body {
+  flex: 1; padding: 17px 20px; min-width: 0;
+}
+.az-pub-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.az-pub-authors {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.az-pub-authors .me { color: var(--text-primary); font-weight: 700; }
+.az-pub-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.az-pub-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.az-pub-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  background: var(--layer-0);
+  border: 1px solid var(--border-light);
+  border-radius: 2px;
+  color: var(--text-muted);
+}
+
+/* Venue badges */
+.az-venue {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.v-top  { background: var(--ink); color: var(--chartreuse); }
+.v-conf { background: var(--layer-0); color: var(--text-secondary); border: 1px solid var(--border-mid); }
+.v-acc  { background: var(--layer-3); color: var(--text-tertiary); border: 1px solid var(--border-mid); }
+.v-arxiv{ background: var(--layer-1); color: var(--text-muted); border: 1px dashed var(--border-light); }
+
+.az-pub.coauthor { opacity: 0.6; }
+.az-pub.coauthor:hover { opacity: 1; }
+
+/* ═══════════════════════════════════════════════
+   HONORS
+   ═══════════════════════════════════════════════ */
+.az-honor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media(max-width:580px){ .az-honor-grid{grid-template-columns:1fr;} }
+
+.az-honor {
+  background: var(--layer-2);
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
+  padding: 22px;
+  transition: all 0.15s;
+}
+.az-honor:hover { border-color: var(--border-strong); background: var(--layer-3); }
+.az-honor-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  background: var(--ink);
+  color: var(--chartreuse);
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+.az-honor-text {
+  font-size: 13px;
+  line-height: 1.68;
+  color: var(--text-secondary);
+}
+.az-honor-text strong { color: var(--ink); font-weight: 600; }
+
+/* ═══════════════════════════════════════════════
+   PROJECTS
+   ═══════════════════════════════════════════════ */
+.az-proj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media(max-width:580px){ .az-proj-grid{grid-template-columns:1fr;} }
+
+.az-proj {
+  background: var(--layer-2);
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
+  padding: 24px;
+  transition: all 0.15s;
+}
+.az-proj:hover { border-color: var(--border-strong); background: var(--layer-3); }
+.az-proj-icon { font-size: 26px; margin-bottom: 12px; display: block; }
+.az-proj-name {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.az-proj-type {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.az-proj-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.az-proj-link {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 6px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  display: inline-block;
+  transition: all 0.15s;
+}
+.az-proj-link:hover {
+  background: var(--ink);
+  color: var(--chartreuse);
+}
+
+/* ═══════════════════════════════════════════════
+   CONTACT
+   ═══════════════════════════════════════════════ */
+.az-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@media(max-width:540px){ .az-contact-grid{grid-template-columns:1fr;} }
+
+.az-contact-card {
+  background: var(--layer-2);
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.15s;
+}
+.az-contact-card:hover { border-color: var(--border-strong); background: var(--layer-3); }
+.az-contact-icon { font-size: 22px; display: block; margin-bottom: 8px; }
+.az-contact-val {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+/* ═══════════════════════════════════════════════
+   FOOTER — Ink dark
+   ═══════════════════════════════════════════════ */
+.az-footer {
+  background: var(--ink);
+  margin: 60px -20px -20px;
+  padding: 26px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.az-footer-l {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  color: rgba(242,238,225,0.35);
+}
+.az-footer-r {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--chartreuse);
+  opacity: 0.75;
+}
+
+/* Scroll reveal */
+.rv { animation: fadeUp 0.55s ease both; }
+.d1 { animation-delay: 0.08s; }
+.d2 { animation-delay: 0.16s; }
+</style>
+
+
+
+<div class="az-page">
+
+
+<div class="az-topbar">
+  <div class="az-topbar-left"><span class="az-topbar-dot"></span>NODE ACTIVE · CASIA · BEIJING</div>
+  <div class="az-topbar-right">Multimodal AI</div>
+</div>
+
+
+<div class="az-hero">
+  <div class="az-hero-eyebrow">PhD Candidate · Institute of Automation · Chinese Academy of Sciences</div>
+  <h1 class="az-hero-name">Dizhan <span>Xue</span></h1>
+  <p class="az-hero-role">State Key Laboratory of Multimodal Artificial Intelligence Systems</p>
+  <p class="az-hero-desc">
+    Researcher at <strong>CASIA</strong>, advised by Prof. Changsheng Xu.<br />
+    Building toward <strong>AGI through multimodal reasoning</strong> — with a current focus on <strong>LLM Agents</strong> and their capacity for open-world intelligence.
+  </p>
+  <div class="az-social-row">
+    <a href="mailto:xuedizhan17@mails.ucas.ac.cn" class="az-social-btn">Email</a>
+    <a href="https://scholar.google.com/citations?user=V5Aeh_oAAAAJ" class="az-social-btn">Scholar</a>
+    <a href="https://dblp.org/pid/293/9621" class="az-social-btn">DBLP</a>
+    <a href="https://github.com/LivXue" class="az-social-btn">GitHub</a>
+  </div>
+</div>
+
+
+<div class="az-stats rv">
+  <div class="az-stat"><span class="az-stat-num">20+</span><span class="az-stat-label">Publications</span></div>
+  <div class="az-stat"><span class="az-stat-num">9</span><span class="az-stat-label">First-author Papers</span></div>
+  <div class="az-stat"><span class="az-stat-num">4</span><span class="az-stat-label">Top Conferences</span></div>
+  <div class="az-stat"><span class="az-stat-num">5</span><span class="az-stat-label">Top Journals</span></div>
+</div>
+
+
+<div class="az-section-hd rv">
+  <div class="az-section-title">About</div>
+  <div class="az-section-num">01 / 07</div>
+</div>
+
+
+<div class="az-section-bg rv d1">
+  <div style="display:grid;grid-template-columns:1fr;gap:10px">
+    <div class="az-card">
+      <div class="az-about-text">
+        <p>I'm a PhD candidate at <strong>State Key Laboratory of Multimodal Artificial Intelligence Systems</strong>, Institute of Automation, Chinese Academy of Sciences (CASIA), advised by <strong>Prof. Changsheng Xu</strong>.</p>
+        <p>My core research focuses on enabling AI to understand and reason across complex multimodal information. I believe that <strong>multimodal intelligence is the essential pathway to AGI</strong>. Recently, I've been particularly interested in <strong>LLM Agents</strong> and their capabilities in sophisticated reasoning tasks.</p>
+      </div>
+    </div>
+    <div class="az-card">
+      <span class="az-chip-label">Research Interests</span>
+      <div class="az-chips">
+        <span class="az-chip">Multimodal Reasoning</span>
+        <span class="az-chip">LLM Agents</span>
+        <span class="az-chip">Explainable AI</span>
+        <span class="az-chip">Vision-Language Models</span>
+        <span class="az-chip">Social Media Analysis</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="az-section-hd rv">
+  <div class="az-section-title">Education</div>
+  <div class="az-section-num">02 / 07</div>
+</div>
+
+<div class="az-section-bg rv d1">
+  <div style="display:grid;grid-template-columns:1fr;gap:10px">
+    
+    <div class="az-card">
+      <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:12px">
+        <span style="font-size:24px">🔬</span>
+        <div style="flex:1">
+          <div style="font-family:var(--font-serif);font-size:15px;font-weight:500;color:var(--ink);margin-bottom:4px">PhD in Pattern Recognition and Intelligent Systems</div>
+          <div style="font-size:12px;color:var(--text-tertiary)">Institute of Automation, Chinese Academy of Sciences (CASIA)</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+        <strong>📅</strong> Sep 2021 - Jun 2026<br />
+        <strong>👨‍🏫</strong> Advisor: <span style="color:var(--text-primary)">Prof. Changsheng Xu</span><br />
+        <strong>📝</strong> Thesis: <span style="color:var(--text-primary)">Reliable Multimodal Reasoning in Complicated Scenarios</span>
+      </div>
+    </div>
+
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="language">plaintext</span>
+                        <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <pre><code class="hljs language-plaintext">&lt;!-- Bachelor --&gt;
+&lt;div class="az-card"&gt;
+  &lt;div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;"&gt;
+    &lt;span style="font-size: 24px;"&gt;🎓&lt;/span&gt;
+    &lt;div style="flex: 1;"&gt;
+      &lt;div style="font-family: var(--font-serif); font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 4px;"&gt;Bachelor of Computer Science and Technology&lt;/div&gt;
+      &lt;div style="font-size: 12px; color: var(--text-tertiary);"&gt;University of Chinese Academy of Sciences (UCAS) (\#3 in China by national avg. admission score)&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style="font-size: 11px; color: var(--text-secondary); line-height: 1.8;"&gt;
+    &lt;strong&gt;📅&lt;/strong&gt; Sep 2017 - Jun 2021&lt;br&gt;
+    &lt;strong&gt;👨‍🏫&lt;/strong&gt; Advisor: &lt;span style="color: var(--text-primary);"&gt;Prof. Changsheng Xu&lt;/span&gt;&lt;br&gt;
+    &lt;strong&gt;📝&lt;/strong&gt; Thesis: &lt;span style="color: var(--text-primary);"&gt;Debiased Short Video Recommendation Based on Counterfactual Reasoning&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+</div>
+
+
+<div class="az-section-hd rv">
+  <div class="az-section-title">First-author Papers</div>
+  <div class="az-section-num">03 / 07</div>
+</div>
+
+
+<div class="az-section-bg rv">
+  <div class="az-pub-list">
+
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="language">plaintext</span>
+                        <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <pre><code class="hljs language-plaintext">&lt;div class="az-pub"&gt;
+  &lt;div class="az-pub-stripe s-ch"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Integrating Neural-Symbolic Reasoning With Variational Causal Inference Network for Explanatory Visual Question Answering&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;&lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;VQA&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Causal Inference&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Neural-Symbolic&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Explainable AI&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;IEEE TPAMI 2024&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub"&gt;
+  &lt;div class="az-pub-stripe s-aq"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Variational Causal Inference Network for Explanatory Visual Question Answering&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;&lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;VQA&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Causal Inference&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Explainable AI&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;ICCV 2023&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub"&gt;
+  &lt;div class="az-pub-stripe s-or"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;SoMe: A Realistic Benchmark for LLM-based Social Media Agents&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;&lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Jing Cui, Shengsheng Qian, Chuanrui Hu, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;LLM Agents&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Social Media&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Benchmark&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;AAAI 2026&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub"&gt;
+  &lt;div class="az-pub-stripe s-vr"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Few-Shot Multimodal Explanation for Visual Question Answering&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;&lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;VQA&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Few-Shot&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Explainable AI&lt;/span&gt;&lt;span class="az-pub-tag"&gt;LLM Agents&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-conf"&gt;ACM MM 2024&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub"&gt;
+  &lt;div class="az-pub-stripe s-ch"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;MMT: Image-guided Story Ending Generation with Multimodal Memory Transformer&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;&lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Quan Fang, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Cross-Modal Generation&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Vision-Language&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Memory&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-conf"&gt;ACM MM 2022&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub"&gt;
+  &lt;div class="az-pub-stripe s-aq"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;LININ: Logic Integrated Neural Inference Network for Explanatory Visual Question Answering&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;&lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Quan Fang, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;VQA&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Neural-Symbolic&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Explainable AI&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-conf"&gt;IEEE TMM 2024&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub"&gt;
+  &lt;div class="az-pub-stripe s-in"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Vision-Controllable Language Model for Image-guided Story Ending Generation&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;&lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Controllable Generation&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Vision-Language&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-acc"&gt;IEEE TMM (accepted)&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub"&gt;
+  &lt;div class="az-pub-stripe s-ch"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Short-video Propagation Influence Rating: A New Real-world Dataset and A New Large Graph Model&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;&lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Chuanrui Hu, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Short Video&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Large Graph Model&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Dataset&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-acc"&gt;IEEE TKDE (accepted)&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub"&gt;
+  &lt;div class="az-pub-stripe s-or"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;A Unified Framework for Backdoor Trigger Segmentation&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;&lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Xueshan Deng, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Backdoor Attack&lt;/span&gt;&lt;span class="az-pub-tag"&gt;AI Security&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-acc"&gt;IEEE TIP 2026&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+</div>
+
+
+<div class="az-section-hd rv">
+  <div class="az-section-title">Co-authored Papers</div>
+  <div class="az-section-num">04 / 07</div>
+</div>
+
+<div class="az-section-bg rv">
+  <div class="az-pub-list">
+
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="language">plaintext</span>
+                        <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <pre><code class="hljs language-plaintext">&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-in"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Integrating Multi-Label Contrastive Learning with Dual Adversarial Graph Neural Networks for Cross-Modal Retrieval&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Shengsheng Qian, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Quan Fang, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Cross-Modal Retrieval&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Contrastive Learning&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Graph Neural Networks&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;IEEE TPAMI 2022&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-ch"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Zhenyu Yang, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Weiming Dong, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Composed Retrieval&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Zero-Shot&lt;/span&gt;&lt;span class="az-pub-tag"&gt;LLM&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;ACM SIGIR 2024 🏆&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-aq"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;BadAgent: Inserting and Activating Backdoor Attacks in LLM Agents&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Yifei Wang, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengjie Zhang, Shengsheng Qian&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Backdoor Attack&lt;/span&gt;&lt;span class="az-pub-tag"&gt;LLM Agents&lt;/span&gt;&lt;span class="az-pub-tag"&gt;AI Security&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;ACL 2024&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-vr"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Dual Adversarial Graph Neural Networks for Multi-Label Cross-Modal Retrieval&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Shengsheng Qian, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Quan Fang, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Cross-Modal Retrieval&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Adversarial Learning&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Graph Neural Networks&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;AAAI 2021&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-or"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Nonparametric Clustering-Guided Cross-View Contrastive Learning for Partially View-Aligned Representation Learning&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Shengsheng Qian, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Jun Hu, Huaiwen Zhang, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Contrastive Learning&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Partially Aligned&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Clustering&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;IEEE TIP 2024&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-in"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Adaptive Label-Aware Graph Convolutional Networks for Cross-Modal Retrieval&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Shengsheng Qian, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Quan Fang, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Cross-Modal Retrieval&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Graph Convolutional Networks&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Label-Aware&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;IEEE TMM 2021&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-ch"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Open-World Social Event Classification&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Shengsheng Qian, Hong Chen, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Quan Fang, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Social Event&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Open-World&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Classification&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;WWW 2023&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-aq"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Semantic Editing Increment Benefits Zero-Shot Composed Image Retrieval&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Zhenyu Yang, Shengsheng Qian, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Jiahong Wu, Fan Yang, Weiming Dong, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Composed Retrieval&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Zero-Shot&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Semantic Editing&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;ACM MM 2024&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-vr"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;Learning Temporal Event Knowledge for Continual Social Event Classification&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Shengsheng Qian, Shengjie Zhang, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Huaiwen Zhang, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Temporal Knowledge&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Continual Learning&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Social Event&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;IEEE TKDE 2025&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-or"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body"&gt;
+    &lt;div class="az-pub-title"&gt;SVBench: A Benchmark with Temporal Multi-Turn Dialogues for Streaming Video Understanding&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;Zhenyu Yang, Yuhang Hu, Zemin Du, &lt;span class="me"&gt;Dizhan Xue&lt;/span&gt;, Shengsheng Qian, Jiahong Wu, Fan Yang, Weiming Dong, Changsheng Xu&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Streaming Video&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Multi-Turn Dialogue&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Benchmark&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-top"&gt;ICLR 2025&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+</div>
+
+
+<div class="az-section-hd rv">
+  <div class="az-section-title">Preprints</div>
+  <div class="az-section-num">05 / 07</div>
+</div>
+
+<div class="az-section-bg rv">
+  <div class="az-pub-list">
+
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="language">plaintext</span>
+                        <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <pre><code class="hljs language-plaintext">&lt;div class="az-pub coauthor"&gt;
+  &lt;div class="az-pub-stripe s-in" style="border-style: dashed !important; opacity: 0.6;"&gt;&lt;/div&gt;
+  &lt;div class="az-pub-body" style="background: rgba(26, 20, 0, 0.03); border: 1px dashed var(--border-mid) !important;"&gt;
+    &lt;div class="az-pub-title"&gt;A Survey on Interpretable Cross-modal Reasoning&lt;/div&gt;
+    &lt;div class="az-pub-authors"&gt;CoRR abs/2309.01955 (2023)&lt;/div&gt;
+    &lt;div class="az-pub-footer"&gt;
+      &lt;div class="az-pub-tags"&gt;&lt;span class="az-pub-tag"&gt;Survey&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Interpretable AI&lt;/span&gt;&lt;span class="az-pub-tag"&gt;Cross-modal Reasoning&lt;/span&gt;&lt;/div&gt;
+      &lt;span class="az-venue v-arxiv"&gt;arXiv 2023&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+</div>
+
+
+<div class="az-section-hd rv">
+  <div class="az-section-title">Selected Honors</div>
+  <div class="az-section-num">06 / 07</div>
+</div>
+
+<div class="az-section-bg rv">
+  <div class="az-honor-grid">
+    <div class="az-honor">
+      <span class="az-honor-badge">Best Paper Honorable Mention</span>
+      <div class="az-honor-text"><strong>ACM SIGIR 2024</strong> — LDRE: LLM-based Divergent Reasoning and Ensemble for Zero-Shot Composed Image Retrieval. (Second author)</div>
+    </div>
+    <div class="az-honor">
+      <span class="az-honor-badge" style="background:var(--ink);color:var(--aqua)">First-Class Scholarship</span>
+      <div class="az-honor-text"><strong>UCAS 2018</strong> — First-Class Academic Scholarship of the University of Chinese Academy of Sciences. Awarded to the top 5% of students.</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="az-section-hd rv">
+  <div class="az-section-title">Open Source</div>
+  <div class="az-section-num">07 / 07</div>
+</div>
+
+<div class="az-section-bg rv">
+  <div class="az-proj-grid">
+    <div class="az-proj">
+      <span class="az-proj-icon">📧</span>
+      <div class="az-proj-name">MailMind</div>
+      <div class="az-proj-type">Email Agent</div>
+      <div class="az-proj-desc">LLM-powered multi-step email assistant for intelligent email management.</div>
+      <a href="https://github.com/LivXue/open-email-agent" class="az-proj-link">View on GitHub →</a>
+    </div>
+    <div class="az-proj">
+      <span class="az-proj-icon">🔗</span>
+      <div class="az-proj-name">GNN4CMR</div>
+      <div class="az-proj-type">Cross-modal Retrieval</div>
+      <div class="az-proj-desc">Graph Neural Network and Toolkits for Cross-modal Retrieval tasks.</div>
+      <a href="https://github.com/LivXue/GNN4CMR" class="az-proj-link">View on GitHub →</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="az-section-hd rv">
+  <div class="az-section-title">Contact</div>
+</div>
+
+<div class="az-section-bg rv">
+  <div class="az-contact-grid">
+    <div class="az-contact-card">
+      <span class="az-contact-icon">📧</span>
+      <div class="az-contact-val">xuedizhan17@mails.ucas.ac.cn</div>
+    </div>
+    <div class="az-contact-card">
+      <span class="az-contact-icon">🌐</span>
+      <div class="az-contact-val">dblp.org/pid/293/9621</div>
+    </div>
+    <div class="az-contact-card">
+      <span class="az-contact-icon">💻</span>
+      <div class="az-contact-val">github.com/LivXue</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="az-footer">
+  <div class="az-footer-l">© 2026 Dizhan Xue · State Key Laboratory of Multimodal Artificial Intelligence Systems</div>
+  <div class="az-footer-r">Built with passion for multimodal AI &amp; intelligent systems</div>
+</div>
+
+</div>
+</body>
+</html>
