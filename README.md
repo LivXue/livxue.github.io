@@ -253,7 +253,7 @@ a { text-decoration: none; }
 }
 .az-stat-label {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(242,238,225,0.3);
