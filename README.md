@@ -154,7 +154,7 @@ a { text-decoration: none; }
 }
 .az-hero-name {
   font-family: var(--font-serif);
-  font-size: clamp(52px, 9vw, 88px);
+  font-size: clamp(64px, 11vw, 110px);
   font-weight: 300;
   letter-spacing: -3px;
   line-height: 0.92;
@@ -615,7 +615,7 @@ a { text-decoration: none; }
 
 <!-- ════ HERO ════ -->
 <div class="az-hero">
-  <div class="az-hero-eyebrow">PhD Candidate · Institute of Automation · CAS</div>
+  <div class="az-hero-eyebrow">PhD Candidate · Institute of Automation · Chinese Academy of Sciences</div>
   <h1 class="az-hero-name" data-text="Dizhan Xue">Dizhan <span>Xue</span></h1>
   <p class="az-hero-role">State Key Laboratory of Multimodal Artificial Intelligence Systems</p>
   <p class="az-hero-desc">
