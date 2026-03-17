@@ -57,6 +57,13 @@
 @keyframes blink {
   0%,100% { opacity:1; } 50% { opacity:0; }
 }
+@keyframes glitchSlide {
+  0%,100% { clip-path:inset(0 0 100% 0); transform:translateX(0); }
+  20% { clip-path:inset(15% 0 60% 0); transform:translateX(-4px); }
+  40% { clip-path:inset(40% 0 30% 0); transform:translateX(4px); }
+  60% { clip-path:inset(60% 0 10% 0); transform:translateX(-3px); }
+  80% { clip-path:inset(80% 0  0% 0); transform:translateX(2px); }
+}
 
 /* ═══════════════════════════════════════════════
    BASE RESET
@@ -153,7 +160,19 @@ a { text-decoration: none; }
   line-height: 0.92;
   color: var(--ink);
   margin-bottom: 22px;
+  position: relative;
+  display: inline-block;
 }
+/* Glitch ghost layer — Chartreuse tint */
+.az-hero-name::before {
+  content: attr(data-text);
+  position: absolute; top: 0; left: 0;
+  color: var(--chartreuse);
+  opacity: 0.55;
+  pointer-events: none;
+  animation: glitchSlide 6s ease-in-out infinite;
+}
+/* Chartreuse underline on "Xue" */
 .az-hero-name span {
   position: relative;
   display: inline-block;
@@ -597,7 +616,7 @@ a { text-decoration: none; }
 <!-- ════ HERO ════ -->
 <div class="az-hero">
   <div class="az-hero-eyebrow">PhD Candidate · Institute of Automation · CAS</div>
-  <h1 class="az-hero-name">Dizhan <span>Xue</span></h1>
+  <h1 class="az-hero-name" data-text="Dizhan Xue">Dizhan <span>Xue</span></h1>
   <p class="az-hero-role">State Key Laboratory of Multimodal Artificial Intelligence Systems</p>
   <p class="az-hero-desc">
     Researcher at <strong>CASIA</strong>, advised by Prof. Changsheng Xu.<br>
@@ -605,7 +624,7 @@ a { text-decoration: none; }
     on <strong>LLM Agents</strong> and their capacity for open-world intelligence.
   </p>
   <div class="az-social-row">
-    <a href="mailto:xdz@ia.ac.cn" class="az-social-btn">Email</a>
+    <a href="/cdn-cgi/l/email-protection#a9d1cdd3e9c0c887c8ca87cac7" class="az-social-btn">Email</a>
     <a href="https://scholar.google.com/citations?user=0000000000" class="az-social-btn">Scholar</a>
     <a href="https://dblp.org/pid/293/9621" class="az-social-btn">DBLP</a>
     <a href="https://github.com/LivXue" class="az-social-btn">GitHub</a>
@@ -863,7 +882,7 @@ a { text-decoration: none; }
   <div class="az-contact-grid">
     <div class="az-contact-card">
       <span class="az-contact-icon">📧</span>
-      <div class="az-contact-val">xdz@ia.ac.cn</div>
+      <div class="az-contact-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f170b152f060e410e0c410c01">[email&#160;protected]</a></div>
     </div>
     <div class="az-contact-card">
       <span class="az-contact-icon">🌐</span>
@@ -878,8 +897,4 @@ a { text-decoration: none; }
 
 <!-- ════ FOOTER (Ink dark) ════ -->
 <div class="az-footer">
-  <div class="az-footer-l">© 2025 Dizhan Xue · CASIA · State Key Laboratory of Multimodal AI Systems</div>
-  <div class="az-footer-r">Multimodal · Agent · AGI</div>
-</div>
-
-</div><!-- /.az-page -->
+  <div class="az-footer-l">© 2025 Dizhan Xue · CASI
