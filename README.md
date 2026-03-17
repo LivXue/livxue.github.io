@@ -1047,7 +1047,7 @@ a { text-decoration: none; }
 
 <!-- ════ CONTACT ════ -->
 <div class="az-section-hd rv">
-  <div class="az-section-title">Con<em>tact</em></div>
+  <div class="az-section-title">Contact</div>
 </div>
 
 <div class="az-section-bg rv">
