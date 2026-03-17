@@ -91,9 +91,11 @@ a { text-decoration: none; }
    ═══════════════════════════════════════════════ */
 .az-page {
   max-width: 860px;
-  margin: 0 auto;
-  padding: 0 20px 100px;
+  margin: 20px auto;
+  padding: 20px;
   background: var(--layer-0);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
 }
 
 /* ═══════════════════════════════════════════════
@@ -1069,7 +1071,7 @@ a { text-decoration: none; }
 
 <!-- ════ FOOTER (Ink dark) ════ -->
 <div class="az-footer">
-  <div class="az-footer-l">© 2025 Dizhan Xue · State Key Laboratory of Multimodal Artificial Intelligence Systems</div>
+  <div class="az-footer-l">© 2026 Dizhan Xue · State Key Laboratory of Multimodal Artificial Intelligence Systems</div>
   <div class="az-footer-r">Built with passion for multimodal AI & intelligent systems</div>
 </div>
 
